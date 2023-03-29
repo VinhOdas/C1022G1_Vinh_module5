@@ -36,6 +36,8 @@
     rating: 3.5, 
   }, 
 ];
+let checkRating2 = courses.filter(course => course.rating < 4)
+
     let checkRatingMap2 = checkRating2.map(course => 
     course.id + " - " + course.title + " - " + course.rating
    
