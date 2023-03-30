@@ -1,12 +1,10 @@
 
 import './App.css';
-import CountNumber from './components/CountNumber';
-
+import SwapColor from './components/SwapColor';
 function App() {
   return (
     <div className="App">
-       {/* <AddComponent firstNumber = {1} secondNumber = {34} /> */}
-     <CountNumber  />
+     <SwapColor />
     </div>
   );
 }
