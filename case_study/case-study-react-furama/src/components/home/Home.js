@@ -7,7 +7,6 @@ import Navigation from './Navigation'
   render() {
     return (
       <div>
-        <body className="d-flex flex-column" >
             <Header/>
             <div className="sticky-top">
                 <Navigation/>
@@ -78,7 +77,7 @@ import Navigation from './Navigation'
             </div>
 
             <Footer/>
-        </body>
+
       </div>
     )
   }

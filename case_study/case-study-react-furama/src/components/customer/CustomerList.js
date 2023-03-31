@@ -6,8 +6,7 @@ export default class CustomerList extends Component {
   render() {
     return (
       <div>
-        
-        <body className="d-flex flex-column" >
+      
             <Header/>
             <Navigation/>
 
@@ -42,7 +41,6 @@ export default class CustomerList extends Component {
   </table>
 
 
-</body>
       </div>
     )
   }
