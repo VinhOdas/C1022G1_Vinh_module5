@@ -1,35 +1,34 @@
 import {Component} from 'react'
 
 class Student extends Component{
-    constructor(props){
-        super(props);
-        this.state ={
-            Student: [{
-                name: "Vinh",
-                age: 3,
-                address: "Quang Binh"
-            }]
-        }
-    }
+   
+    
     render(){
-        <table>
-            <thead>
-            <tr>
-                <th>name</th>
-                <th>age</th>
-                <th>address</th>
-            </tr>
-            </thead>
-            <tbody >
-                <tr array.forEach(element => {
-                    
-                });>
-                    <td></td>
-                </tr>
-            </tbody>
+        return (
+            <table   style={{border: "2"}}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{this.props.id}</td>
+                        <td>{this.props.name}</td>
+                        <td>{this.props.age}</td>
+                        <td>{this.props.address}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        );
 
-        </table>
 
     }
 
 }
+
+export default Student
