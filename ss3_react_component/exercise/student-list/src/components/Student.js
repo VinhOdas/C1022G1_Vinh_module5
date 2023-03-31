@@ -15,7 +15,7 @@ class Student extends Component{
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr key={Student.toString}>
                         <td>{this.props.id}</td>
                         <td>{this.props.name}</td>
                         <td>{this.props.age}</td>

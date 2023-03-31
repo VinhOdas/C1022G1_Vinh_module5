@@ -5,10 +5,10 @@ class StudentList extends Component{
     
 
     render(){
-        
-        const students = this.props.students.map(student =>(
+        const students = this.props.students.map((student) =>(
             <Student 
-            id={student.id}
+    
+            id = {student.id}
             name ={student.name}
             age = {student.age}
             address = {student.address}  />
