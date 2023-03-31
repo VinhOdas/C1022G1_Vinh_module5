@@ -67,9 +67,9 @@ body {
   padding: 0;
   /*padding-left: 140px;*/
 }
-/* #diaChi{
+#diaChi{
   font-size: 15px !important;
-} */
+}
 .fs-4{
   font-size: 15px !important
 }
@@ -147,7 +147,7 @@ a {
 }
 
 p, a {
-  font-size: 13px;
+  /* font-size: 13px; */
   line-height: 1.6em;
 }
 
@@ -173,7 +173,7 @@ span {
   transform: translate(-50%, -50%);
   z-index: 2;
   color: white;
-  font-size: 24px ;
+  /* font-size: 24px ; */
   width: 500px;
 }
 
@@ -188,7 +188,7 @@ span {
   background-color: #af936c;
   color: white;
   padding: 10px;
-  font-size: 12px;
+  /* font-size: 12px; */
   width: fit-content;
   position: absolute;
   bottom: 0;
@@ -283,7 +283,7 @@ span {
 
 }
 #inDam{
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 /*.festival-container {*/
 /*    display: flex;*/
@@ -312,9 +312,6 @@ span {
 }
 
 Footer
-
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -332,7 +329,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 10px;
-  font: inherit;
+  /* font: inherit; */
   vertical-align: baseline;
 }
 

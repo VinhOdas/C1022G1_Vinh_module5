@@ -1,11 +1,15 @@
 import './App.css';
+import CustomerList from './components/customer/CustomerList';
 
-import Home from './components/home/Home';
 
 function App() {
   return (
     <>
-     <Home/>
+     {/* <Home/> */}
+     {/* <FacilityList/> */}
+     {/* <FacilityAdd/> */}
+     {/* <FacilityEdit/> */}
+     <CustomerList></CustomerList>
     </>
    
   );
