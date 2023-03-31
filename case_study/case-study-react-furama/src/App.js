@@ -1,5 +1,5 @@
 import './App.css';
-import CustomerList from './components/customer/CustomerList';
+import CustomerAdd from './components/customer/CustomerAdd';
 
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
      {/* <FacilityList/> */}
      {/* <FacilityAdd/> */}
      {/* <FacilityEdit/> */}
-     <CustomerList></CustomerList>
+     {/* <CustomerList></CustomerList> */}
+     {/* <CustomerEdit/> */}
+    <CustomerAdd/>
     </>
    
   );
