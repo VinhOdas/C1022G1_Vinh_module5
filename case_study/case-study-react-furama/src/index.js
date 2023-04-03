@@ -10,9 +10,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <body className="d-flex flex-column" >
+  // <body className="d-flex flex-column" >
   <App/>
-  </body>
+  // </body>
 );
 
 

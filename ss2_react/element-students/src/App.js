@@ -49,10 +49,10 @@ function App() {
      
     {
       
-        students.map((student,numbers) =>(
+        students.map((student,index) =>(
        <tbody>
-        <tr key={numbers.toString}>
-          <td>{numbers+1}</td>
+        <tr key={index}>
+          <td>{index+1}</td>
           <td>{student.company}</td>
           <td>{student.contact}</td>
           <td>{student.country}</td>

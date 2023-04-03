@@ -1,17 +1,18 @@
 import './App.css';
-import CustomerAdd from './components/customer/CustomerAdd';
+import Home from './components/home/Home';
+
 
 
 function App() {
   return (
     <>
-     {/* <Home/> */}
+     <Home/>
      {/* <FacilityList/> */}
      {/* <FacilityAdd/> */}
      {/* <FacilityEdit/> */}
      {/* <CustomerList></CustomerList> */}
      {/* <CustomerEdit/> */}
-    <CustomerAdd/>
+    {/* <CustomerAdd/> */}
     </>
    
   );
