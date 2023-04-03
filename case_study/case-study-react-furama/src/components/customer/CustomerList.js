@@ -3,6 +3,9 @@ import Header from '../home/Header'
 import Navigation from '../home/Navigation'
 
 export default class CustomerList extends Component {
+
+ 
+  
   render() {
     return (
       <div>
