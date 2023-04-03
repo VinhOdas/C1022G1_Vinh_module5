@@ -1,7 +1,10 @@
 import {Component} from 'react'
 
 class Student extends Component{
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc711da36ace554ba730b1ffb4ef80988b9c00f4
    
     
     render(){
@@ -30,4 +33,13 @@ class Student extends Component{
 
         }
     }
+<<<<<<< HEAD
+=======
+
+}
+
+ 
+
+
+>>>>>>> cc711da36ace554ba730b1ffb4ef80988b9c00f4
 export default Student
