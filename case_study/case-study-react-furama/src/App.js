@@ -1,4 +1,5 @@
 import './App.css';
+import ContractAdd from './components/contract/ContractAdd';
 import CustomerAdd from './components/customer/CustomerAdd';
 
 
@@ -11,7 +12,8 @@ function App() {
      {/* <FacilityEdit/> */}
      {/* <CustomerList></CustomerList> */}
      {/* <CustomerEdit/> */}
-    <CustomerAdd/>
+    {/* <CustomerAdd/> */}
+    <ContractAdd/>
     </>
    
   );
