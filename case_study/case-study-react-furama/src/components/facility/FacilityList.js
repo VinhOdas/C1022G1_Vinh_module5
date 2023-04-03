@@ -2,11 +2,13 @@ import React from 'react'
 import Footer from '../home/Footer'
 import Navigation from '../home/Navigation'
 import facilityData from './model/Facility'
+import Header from '../home/Header'
 
 function FacilityList() {
   return (
 
     <div>
+      <Header/>
       <Navigation />
       <div className="container-fluid">
         <div>
@@ -55,6 +57,8 @@ function FacilityList() {
                       <td>{facilityLists.facilityFree}</td>
                       <td>{facilityLists.rentType.name}</td>
                       <td>{facilityLists.facilityType.name}</td>
+                      <td><button style={{backgroundColor: "greenyellow"}}>Edit</button></td> 
+                     <td><button style={{backgroundColor: "greenyellow"}}>Delete</button></td> 
                     </tr>
                   </>
 

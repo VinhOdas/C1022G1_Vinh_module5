@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
 import Footer from '../home/Footer'
 import Header from '../home/Header'
 
-export default class FacilityEdit extends Component {
-  render() {
+export default function FacilityEdit() {
     return (
       <div>
 <Header></Header>
@@ -118,4 +116,4 @@ export default class FacilityEdit extends Component {
              </div>
     )
   }
-}
+

@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
 import Footer from '../home/Footer'
 import Header from '../home/Header'
 import Navigation from '../home/Navigation'
+import { Link } from "react-router-dom";
 
-export default class CustomerAdd extends Component {
-  render() {
+
+export default function CustomerAdd()  {
+
     return (
       <div>
-
-
         <Header />
-
         <Navigation />
 
         <div className="container">
@@ -99,10 +97,17 @@ export default class CustomerAdd extends Component {
 
                     </div>
                     <div className="col-12">
-                      <button type="submit" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
-                      >Update
+                      <button  className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                        <Link style={{textDecoration: "none", color: "whitesmoke"}} to={'/customers/add'}>
+                        Add
+                        </Link>
+                       
+                      </button>
+                      <button style={{marginLeft: '10%'}} type='reset'  className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                        Reset
                       </button>
                     </div>
+                    
                   </div>
                 </form>
 
@@ -116,4 +121,4 @@ export default class CustomerAdd extends Component {
       </div>
     )
   }
-}
+

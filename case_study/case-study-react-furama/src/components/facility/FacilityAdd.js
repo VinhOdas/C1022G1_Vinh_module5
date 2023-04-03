@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+
 import Footer from '../home/Footer'
 import Header from '../home/Header'
 
-export default class FacilityAdd extends Component {
-  render() {
+export default function FacilityAdd()  {
+ 
     return (
       <div>
         <Header></Header>
@@ -114,4 +114,4 @@ export default class FacilityAdd extends Component {
       </div>
     )
   }
-}
+

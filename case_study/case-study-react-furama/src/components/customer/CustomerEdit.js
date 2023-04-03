@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
 import Footer from '../home/Footer'
 import Header from '../home/Header'
 import Navigation from '../home/Navigation'
 
-export default class CustomerEdit extends Component {
-  render() {
+export default function CustomerEdit()  {
     return (
       <>
         <Header />
@@ -113,4 +111,3 @@ export default class CustomerEdit extends Component {
       </>
     )
   }
-}
