@@ -29,15 +29,15 @@ body {
     padding: 0;
     padding-left: 140px;
 }
-#diaChi{
+/* #diaChi{
+    font-size: 1px ;
+} */
+/* .fs-4{
     font-size: 15px !important;
-}
-.fs-4{
-    font-size: 15px !important;
-}
-.list {
+} */
+/* .list {
     height: 100%;
-}
+} */
 
 .list__item {
     position: relative;
@@ -45,10 +45,14 @@ body {
     padding: 0 20px;
     height: 100%;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .list__item > a {
-    font-size: 20px
+    font-size: 20px;
+    text-decoration: none;
+    color: #e1e1e1;
+
 }
 
 .list__item:hover > a {
@@ -127,7 +131,7 @@ span {
     transform: translate(-50%, -50%);
     z-index: 2;
     color: white;
-    font-size: 24px ;
+    font-size: 20px ;
     width: 500px;
 }
 
@@ -167,7 +171,7 @@ span {
 
 .main-about__title {
     color: #363636;
-    font-size: 30px ;
+    font-size: 20px ;
     line-height: 42px;
     font-weight: 700;
     text-transform: uppercase;
@@ -236,9 +240,9 @@ span {
     top: 0;
 
 }
-#inDam{
+/* #inDam{
     font-size: 30px;
-}
+} */
 /*.festival-container {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/
@@ -265,4 +269,4 @@ span {
     text-align: center;
 }
 
-Footer
+

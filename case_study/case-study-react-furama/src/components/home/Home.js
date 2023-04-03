@@ -42,11 +42,11 @@ import Navigation from './Navigation'
 
 <div className="container-fluid">
     <div className="row">
-      <div className="col-4 col-sm-4 col-xl-4 col-md-4 col-lg-4">
+    <div className="col-4 col-sm-4 col-xl-4 col-md-4 col-lg-4">
         <div className="card" style={{width: '100%' , height: '100%'}}>
-          <img style={{width: '100%' , height: '100%'}} src="images/giuong_khach_san_1.jpg" className="card-img-top" alt=""/>
+          <img style={{width: '100%' , height: '70%'}} src="images/u-cr-800x450.jpg" className="card-img-top" alt=""/>
           <div className="card-body" align="center">
-            <strong><h1 className="card-title " style={{color:'red'}}>Phòng CÓ GHẾ TRƯỢT </h1></strong>
+            <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 101-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
             <a href="/#" className="btn btn-primary">Đặt phòng</a>
           </div>
