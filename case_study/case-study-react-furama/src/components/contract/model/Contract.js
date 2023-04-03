@@ -1,4 +1,4 @@
-contract = [
+const contract = [
     {
         id: 1,
         startDate: '2019-11-11',
@@ -6,7 +6,17 @@ contract = [
         deposit: "?",
         customer: {
             id: 1,
-            name: 'Diamond'
+            name: "Pham Quang Vinh",
+            dateOfBirth: "2023-02-01",
+            gender: "2",
+            idCard: "24211201346",
+            phoneNumber: "0989888",
+            email: "6767@gmail.com",
+            address: "Quang Binh",
+            customerType: {
+                id: 2,
+                name: "Platinium"
+            }
         },
         facility: {
             id : 5,
@@ -32,8 +42,8 @@ contract = [
     
         }
     }
-], 
-customer = [
+];
+const customer = [
     {
         id: 1,
         name: "Pham Quang Vinh",
@@ -46,26 +56,12 @@ customer = [
         customerType: {
             id: 2,
             name: "Platinium"
-        },
-
-    },
-    {
-        id: 2,
-        name: "Pham Quang Vinh",
-        dateOfBirth: "2023-02-01",
-        gender: "2",
-        idCard: "24211201346",
-        phoneNumber: "0989888",
-        email: "6767@gmail.com",
-        address: "Quang Binh",
-        customerType: {
-            id: 2,
-            name: "Platinium"
-        },
+        }
 
     }
-],
-customerType = [
+   
+];
+const customerType = [
     {
         id: 1,
         name: 'Diamond'
@@ -82,8 +78,8 @@ customerType = [
         id: 4,
         name: 'Silver'
     }
-],
-facility = [
+];
+const facility = [
     {
         id : 5,
         name: 'Xe đạp',
@@ -107,9 +103,9 @@ facility = [
 
 
     }
-],
+];
 
-facilityType = [
+const facilityType = [
     {
         id: 1,
         name: 'Diamond'
@@ -126,9 +122,9 @@ facilityType = [
         id: 4,
         name: 'Silver'
     }
-],
+];
 
-rentType = [
+const rentType = [
     {
         id: 1,
         name: '?'
@@ -138,5 +134,9 @@ rentType = [
         name: '??'
     }
 
-]
+];
+
+export default {
+    contract, customer, customerType, facility, facilityType,rentType
+}
 

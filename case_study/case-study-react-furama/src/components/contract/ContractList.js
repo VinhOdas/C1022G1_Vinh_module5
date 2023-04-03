@@ -2,8 +2,9 @@ import React from 'react'
 import Header from '../home/Header'
 import Navigation from '../home/Navigation'
 import Footer from '../home/Footer'
+import ContractData from './model/Contract'
 
-export default function ContractList() {
+export default function contractLists() {
   
   return (
     <div>
@@ -23,7 +24,7 @@ export default function ContractList() {
       </span>
     </button>
   </div>
-  <table className="table table-dark" border={1}>
+  <table style={{textAlign: 'center'}} className="table table-dark" border={1}>
     <thead>
       <tr>
         <th className="text-center">STT</th>
@@ -32,19 +33,37 @@ export default function ContractList() {
         <th>Date Start</th>
         <th>Date End</th>
         <th>Deposit</th>
-        <th className="text-center">Attach Facilities</th>
+        <th className="text-center">
+          Attach Facilities</th>
+          <th className="text-center">
+          Delete</th>
       </tr>
     </thead>
     <tbody align="center">
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
+      {
+            ContractData.contract.map((contractLists, index) =>(
+              <>
+              <tr style={{textAlign: 'center'}} key={contractLists}>
+                  <td>{index + 1}</td>
+                  <td>{contractLists.facility.name}</td>
+                  <td>{contractLists.customer.name}</td>
+                  <td>{contractLists.startDate}</td>
+                  <td>{contractLists.endDate}</td>
+                  <td>{contractLists.deposit}</td>
+                  <td>
+                      <button className="btn btn-warning btn-outline-secondary btn-nm">
+                        <span className="fa-solid fa-plus text-light h6 my-auto me-1"></span>
+                        <span className="text-light text-align-center">
+                          Detail
+                          </span>
+                      </button>
+                    </td>
+                    <td><button style={{ backgroundColor: "greenyellow" }}>Delete</button></td>
+              </tr>
+              </>
+            ))
+        }
+          
     </tbody>
   </table>
 </div>
