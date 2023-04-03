@@ -1,6 +1,6 @@
 import './App.css';
-import ContractAdd from './components/contract/ContractAdd';
-import CustomerAdd from './components/customer/CustomerAdd';
+import FacilityList from './components/facility/FacilityList'
+
 
 
 function App() {
@@ -10,10 +10,9 @@ function App() {
      {/* <FacilityList/> */}
      {/* <FacilityAdd/> */}
      {/* <FacilityEdit/> */}
-     {/* <CustomerList></CustomerList> */}
-     {/* <CustomerEdit/> */}
     {/* <CustomerAdd/> */}
-    <ContractAdd/>
+    {/* <ContractAdd/> */}
+    <FacilityList/>
     </>
    
   );

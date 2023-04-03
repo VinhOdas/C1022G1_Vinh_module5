@@ -6,7 +6,6 @@ export default class FacilityEdit extends Component {
   render() {
     return (
       <div>
-        <body className="d-flex flex-column">
 <Header></Header>
 
 <section id="input-mask-wrapper">
@@ -111,7 +110,6 @@ export default class FacilityEdit extends Component {
   </div>
 </section>
 <Footer/>
-</body>
 
       </div>
     )

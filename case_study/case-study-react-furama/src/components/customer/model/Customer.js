@@ -1,4 +1,4 @@
-customer = [
+const customer = [
     {
         id: 1,
         name: "Pham Quang Vinh",
@@ -29,8 +29,8 @@ customer = [
         },
 
     }
-],
-customerType = [
+];
+ const customerType = [
     {
         id: 1,
         name: 'Diamond'
@@ -48,3 +48,6 @@ customerType = [
         name: 'Silver'
     }
 ]
+export default {
+    customer, customerType
+}

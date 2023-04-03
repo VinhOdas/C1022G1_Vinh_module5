@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Footer from '../home/Footer'
-import Header from '../home/Header'
 import Navigation from '../home/Navigation'
-
- class FacilityList extends Component {
-  render() {
+import facilityData from './model/Facility'
+ 
+ function FacilityList()  {
     return (
    
         <div>
-            <body className="d-flex flex-column" >
-<Header/>
+
 <Navigation/>
 <div className="container-fluid">
   <div>
@@ -20,7 +18,7 @@ import Navigation from '../home/Navigation'
     </button>
   </div>
   <div className="row">
-    <table className="table table-dark" border="1">
+    <table className="table table-dark" border="1" style={{textAlign: 'center'}}>
       <thead>
       <tr>
         <th>STT</th>
@@ -40,20 +38,39 @@ import Navigation from '../home/Navigation'
       </tr>
       </thead>
       <tbody align="center">
-     <tr></tr>
+
+    
+        {
+          facilityData.facility.map((facilityLists,index) =>(
+            <>
+             <tr key={facilityLists.id}>
+              <td  key={facilityLists.id} >{index + 1}</td>
+              <td>{facilityLists.name}</td>
+              <td>{facilityLists.area}</td>
+              <td>{facilityLists.cost}</td>
+              <td>{facilityLists.maxPeople}</td>
+              <td>{facilityLists.standardRoom}</td>
+              <td>{facilityLists.descriptionOtherCovenience}</td>
+              <td>{facilityLists.poolArea}</td>
+              <td>{facilityLists.numberOfFloors}</td>
+              <td>{facilityLists.facilityFree}</td>
+              <td>{facilityLists.rentType.name}</td>
+              <td>{facilityLists.facilityType.name}</td>
+              </tr>
+              </>
+              
+          ))
+        }
+     
       </tbody>
     </table>
 
   </div>
-
-
 </div>
-
 <Footer/>
-</body>
-        </div>
+       </div>
 
     )
   }
-}
+
 export default FacilityList

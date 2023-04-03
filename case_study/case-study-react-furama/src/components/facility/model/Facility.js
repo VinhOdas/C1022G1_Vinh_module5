@@ -1,4 +1,4 @@
-facility = [
+const facility = [
     {
         id : 5,
         name: 'Xe đạp',
@@ -22,9 +22,9 @@ facility = [
 
 
     }
-],
+];
 
-facilityType = [
+ const facilityType = [
     {
         id: 1,
         name: 'Diamond'
@@ -41,9 +41,9 @@ facilityType = [
         id: 4,
         name: 'Silver'
     }
-],
+];
 
-rentType = [
+const rentType = [
     {
         id: 1,
         name: '?'
@@ -54,3 +54,8 @@ rentType = [
     }
 
 ]
+export default {
+    facility, facilityType, rentType
+}
+
+
