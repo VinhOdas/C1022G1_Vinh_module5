@@ -6,12 +6,7 @@ export default class FacilityEdit extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-        <Header></Header>
-=======
 <Header></Header>
->>>>>>> cc711da36ace554ba730b1ffb4ef80988b9c00f4
-
         <section id="input-mask-wrapper">
           <div className="row">
             <div className="col-md-12">
@@ -107,28 +102,20 @@ export default class FacilityEdit extends Component {
                     <div className="col-12">
                       <button type="reset" className="btn btn-primary me-1 waves-effect waves-float waves-light">Submit</button>
                       <button type="reset" className="btn btn-outline-secondary waves-effect">Reset</button>
-                    </div>                </div>
+                    </div>               
+                     </div>
                 </form>
               </div>
             </div>
-<<<<<<< HEAD
+
           </div>
         </section>
         <Footer />
-=======
             <div className="col-12">
               <button type="reset" className="btn btn-primary me-1 waves-effect waves-float waves-light">Submit</button>
               <button type="reset" className="btn btn-outline-secondary waves-effect">Reset</button>
-            </div>                </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-<Footer/>
->>>>>>> cc711da36ace554ba730b1ffb4ef80988b9c00f4
-
-      </div>
+            </div>               
+             </div>
     )
   }
 }
