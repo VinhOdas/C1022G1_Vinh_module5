@@ -1,13 +1,9 @@
 import Header from '../home/Header'
 import Navigation from '../home/Navigation'
 import CustomerData from './model/Customer'
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 export default function CustomerList()  {
-
-
-
-
     return (
       <div>
         <Header />
@@ -17,9 +13,9 @@ export default function CustomerList()  {
           <button className="btn btn-primary btn-outline-secondary btn-sm">
             <span className="fa-solid fa-plus text-light h6 my-auto me-1"></span>
             <span className="text-light">
-              <Link style={{textDecoration: 'none', color: 'whitesmoke'}} to={'/customers/add'} > 
+              <NavLink style={{textDecoration: 'none', color: 'whitesmoke'}} to={'/customers/add'} > 
               Create Customer
-              </Link>
+              </NavLink>
               </span>
           </button>
 
@@ -44,17 +40,17 @@ export default function CustomerList()  {
             {
               CustomerData.customer.map((customerLists, index) => (
 
-                <>
-                  <tr key={customerLists.id}>
+              
+                  <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{customerLists.name}</td>
                     <td>{customerLists.dateOfBirth}</td>
                     <td>{customerLists.gender}</td>
                     <td>{customerLists.idCard}</td>
-                    <td>{customerLists.phoneNumber}</td>
+                    <td >{customerLists.phoneNumber}</td>
                     <td>{customerLists.email}</td>
                     <td>{customerLists.address}</td>
-                    <td>{customerLists.customerType.name}</td>
+                    <td >{customerLists.customerType.name}</td>
                     <td>
                       <button className="btn btn-warning btn-outline-secondary btn-nm">
                         <span className="fa-solid fa-plus text-light h6 my-auto me-1"></span>
@@ -65,7 +61,7 @@ export default function CustomerList()  {
                     </td>
                     <td><button style={{ backgroundColor: "greenyellow" }}>Delete</button></td>
                   </tr>
-                </>
+               
               ))
             }
             <tr>

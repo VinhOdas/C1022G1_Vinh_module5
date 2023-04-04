@@ -19,7 +19,7 @@ export default function FacilityAdd()  {
                   <div className="card-body">
                     <div className="row col-md-12 col-xl-12 col-sm-12" >
                       <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
-                        <label className="form-label" for="basicSelect">Facility Type </label>
+                        <label className="form-label" htmlFor="basicSelect">Facility Type </label>
                         <select className="form-select" id="basicSelect" >
                           <option>IT</option>
                           <option>Blade Runner</option>
@@ -34,7 +34,7 @@ export default function FacilityAdd()  {
 
                       </div>
                       <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
-                        <label className="form-label" for="area">Area</label>
+                        <label className="form-label" htmlFor="area">Area</label>
                         <input type="text" className="form-control date-mask" placeholder="1000 mét vuông" id="area"
                         />
 
@@ -47,13 +47,13 @@ export default function FacilityAdd()  {
 
                       </div>
                       <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
-                        <label className="form-label" for="numeral-formatting">Max People</label>
+                        <label className="form-label" htmlFor="numeral-formatting">Max People</label>
                         <input type="text" className="form-control numeral-mask" placeholder="input number people" id="numeral-formatting" />
 
 
                       </div>
                       <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
-                        <label className="form-label" for="standardRoom">Standard Room</label>
+                        <label className="form-label" htmlFor="standardRoom">Standard Room</label>
                         <input type="text" className="form-control block-mask" placeholder="loại phòng" id="standardRoom" />
 
 
@@ -84,14 +84,14 @@ export default function FacilityAdd()  {
 
 
                       <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
-                        <label className="form-label" for="facilityFree">facilityFree</label>
+                        <label className="form-label" htmlFor="facilityFree">facilityFree</label>
                         <input type="text" className="form-control prefix-mask" id="facilityFree" />
                       </div>
 
 
 
                       <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
-                        <label className="form-label" for="rentType">Rent Type</label>
+                        <label className="form-label" htmlFor="rentType">Rent Type</label>
                         <select className="form-select" id="rentType" >
                           <option>IT</option>
                           <option>Blade Runner</option>

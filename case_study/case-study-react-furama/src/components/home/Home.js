@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
 import Navigation from './Navigation'
 
- class Home extends Component {
-  render() {
-    return (
-      <div>
-            <Header/>
+ function Home()  {
+    return (<>
+          <Header/>
             <div className="sticky-top">
                 <Navigation/>
             </div>
@@ -48,7 +46,7 @@ import Navigation from './Navigation'
           <div className="card-body" align="center">
             <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 101-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
-            <a href="/#" className="btn btn-primary">Đặt phòng</a>
+            <NavLink to="/#" className="btn btn-primary">Đặt phòng</NavLink>
           </div>
         </div>
       </div>
@@ -58,7 +56,7 @@ import Navigation from './Navigation'
           <div className="card-body" align="center">
             <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 102-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
-            <a href="/#" className="btn btn-primary">Đặt phòng</a>
+            <NavLink to="/#" className="btn btn-primary">Đặt phòng</NavLink>
           </div>
         </div>
       </div>
@@ -68,7 +66,7 @@ import Navigation from './Navigation'
           <div className="card-body" align="center">
             <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 103-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
-            <a href="/#" className="btn btn-primary">Đặt phòng</a>
+            <NavLink to="/#" className="btn btn-primary">Đặt phòng</NavLink>
           </div>
         </div>
       </div>
@@ -77,9 +75,11 @@ import Navigation from './Navigation'
             </div>
 
             <Footer/>
+    </>
+      
 
-      </div>
+    
     )
   }
-}
+
 export default Home

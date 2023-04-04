@@ -22,7 +22,7 @@ export default function CustomerEdit()  {
                     <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="name_customer">Name Customer::</label>
+                        <label className="form-label" htmlFor="name_customer">Name Customer::</label>
                         <div className="input-group input-group-merge">
                           <input type="text" className="form-control phone-number-mask" placeholder="Input Name" id="name_customer"
                           />
@@ -33,7 +33,7 @@ export default function CustomerEdit()  {
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="dateOfBirth">Date Of Birth :</label>
+                        <label className="form-label" htmlFor="dateOfBirth">Date Of Birth :</label>
                         <input type="date" className="form-control date-mask" placeholder="birth Day"
                           id="dateOfBirth" />
 
@@ -41,7 +41,7 @@ export default function CustomerEdit()  {
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="gender">gender :</label>
+                        <label className="form-label" htmlFor="gender">gender :</label>
                         <select className="form-control" id="gender">
                           <option >Nam</option>
                           <option>Nu</option>
@@ -53,7 +53,7 @@ export default function CustomerEdit()  {
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="idCard">Id Card :</label>
+                        <label className="form-label" htmlFor="idCard">Id Card :</label>
                         <input type="text" className="form-control numeral-mask" placeholder="Id Card :" id="idCard" />
 
                       </div>
@@ -61,7 +61,7 @@ export default function CustomerEdit()  {
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="phoneNumber">Phone Number :</label>
+                        <label className="form-label" htmlFor="phoneNumber">Phone Number :</label>
                         <input type="text" className="form-control block-mask" placeholder="loại phòng" id="phoneNumber"
                         />
 
@@ -70,7 +70,7 @@ export default function CustomerEdit()  {
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="email">Email :</label>
+                        <label className="form-label" htmlFor="email">Email :</label>
                         <input type="text" className="form-control delimiter-mask" placeholder="" id="email" />
 
 
@@ -78,14 +78,14 @@ export default function CustomerEdit()  {
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="address">Address</label>
+                        <label className="form-label" htmlFor="address">Address</label>
                         <input type="text" className="form-control custom-delimiter-mask" placeholder="address" id="address" />
 
                       </div>
 
 
                       <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
-                        <label className="form-label" for="customerType">customerType :</label>
+                        <label className="form-label" htmlFor="customerType">customerType :</label>
                         <select className="form-select" id="customerType" >
                           <option >
 

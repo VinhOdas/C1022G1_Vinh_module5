@@ -1,7 +1,4 @@
-import React, { Component } from 'react'
-
- class Header extends Component {
-  render() {
+ function Header() {
     return (
   
        <section className="header d-flex justify-content-center">
@@ -39,5 +36,5 @@ import React, { Component } from 'react'
 
     )
   }
-}
+
  export default Header

@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
 
- class Footer extends Component {
-  render() {
+
+ function Footer() {
     return (
       <section className="footer d-flex justify-content-center mt-5">
   <div className="wrapper container">
@@ -53,5 +52,5 @@ import React, { Component } from 'react'
 
     )
   }
-}
+
 export default Footer

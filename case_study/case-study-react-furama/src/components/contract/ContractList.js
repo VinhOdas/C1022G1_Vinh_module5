@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../home/Header'
 import Navigation from '../home/Navigation'
 import Footer from '../home/Footer'
-import ContractData from './model/Contract'
+import   ContractData from './model/Contract'
 
 export default function contractLists() {
   
@@ -19,7 +19,6 @@ export default function contractLists() {
     >
       <span className="fa-solid fa-plus text-light h6 my-auto me-1" />
       <span className="text-light">
-        {" "}
         Add New Contract
       </span>
     </button>
@@ -42,11 +41,11 @@ export default function contractLists() {
     <tbody align="center">
       {
             ContractData.contract.map((contractLists, index) =>(
-              <>
-              <tr style={{textAlign: 'center'}} key={contractLists}>
+              
+              <tr style={{textAlign: 'center'}} key={index}>
                   <td>{index + 1}</td>
-                  <td>{contractLists.facility.name}</td>
-                  <td>{contractLists.customer.name}</td>
+                  <td >{contractLists.facility.name}</td>
+                  <td >{contractLists.customer.name}</td>
                   <td>{contractLists.startDate}</td>
                   <td>{contractLists.endDate}</td>
                   <td>{contractLists.deposit}</td>
@@ -60,7 +59,7 @@ export default function contractLists() {
                     </td>
                     <td><button style={{ backgroundColor: "greenyellow" }}>Delete</button></td>
               </tr>
-              </>
+             
             ))
         }
           

@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { NavLinNavLink, k, NavNavLink } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
 
 
-export default class Navigation extends Component {
-  render() {
+export default function Navigation() {
+
     return (
         <nav className="navbar navbar-expand-sm " style={{width: '100%'}}  align="center" >
     <div className="wrapper  d-flex" style={{marginLeft: '30%'}}>
@@ -23,5 +23,5 @@ export default class Navigation extends Component {
     </div>
   </nav>
     )
-  }
+
 }

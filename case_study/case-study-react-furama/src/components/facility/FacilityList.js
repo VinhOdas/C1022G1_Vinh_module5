@@ -43,9 +43,9 @@ function FacilityList() {
 
               {
                 facilityData.facility.map((facilityLists, index) => (
-                  <>
-                    <tr key={facilityLists.id}>
-                      <td key={facilityLists.id} >{index + 1}</td>
+              
+                    <tr key={index}>
+                      <td  >{index + 1}</td>
                       <td>{facilityLists.name}</td>
                       <td>{facilityLists.area}</td>
                       <td>{facilityLists.cost}</td>
@@ -60,7 +60,7 @@ function FacilityList() {
                       <td><button style={{backgroundColor: "greenyellow"}}>Edit</button></td> 
                      <td><button style={{backgroundColor: "greenyellow"}}>Delete</button></td> 
                     </tr>
-                  </>
+            
 
                 ))
               }
