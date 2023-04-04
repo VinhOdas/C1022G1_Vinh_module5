@@ -13,7 +13,9 @@ export default function CustomerAdd()  {
 
         <div className="container">
           <div className="row">
-            <div className="col-md-3"></div>
+            <div className="col-md-3">
+              
+            </div>
             <div className="col-md-6">
               <div className="card">
                 <div className="card-header">

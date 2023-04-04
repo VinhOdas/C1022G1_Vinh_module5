@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { NavLinNavLink, k, NavNavLink } from "react-router-dom";
 
 
 export default class Navigation extends Component {
@@ -9,16 +9,16 @@ export default class Navigation extends Component {
     <div className="wrapper  d-flex" style={{marginLeft: '30%'}}>
     <ul className="list d-flex text-bg-green ">
       <li style={{width: '100%' , textDecoration: 'none'}}  className="list__item d-flex justify-content-center align-items-center">
-      <Link to="/">Home</Link>
+      <NavLink to="/">Home</NavLink>
       </li>
       <li className="list__item d-flex justify-content-center align-items-center">
-        <Link to="/customers">Customer</Link>
+        <NavLink to="/customers">Customer</NavLink>
       </li>
       <li className="list__item d-flex justify-content-center align-items-center">
-        <Link to="/facility">Facility</Link>
+        <NavLink to="/facility">Facility</NavLink>
       </li>
       <li className="list__item d-flex justify-content-center align-items-center">
-        <Link to="/contracts">Contract</Link></li>
+        <NavLink to="/contracts">Contract</NavLink></li>
     </ul>
     </div>
   </nav>

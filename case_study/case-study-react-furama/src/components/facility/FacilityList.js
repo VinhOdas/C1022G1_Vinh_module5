@@ -6,7 +6,7 @@ import Header from '../home/Header'
 
 function FacilityList() {
   return (
-
+      
     <div>
       <Header/>
       <Navigation />
