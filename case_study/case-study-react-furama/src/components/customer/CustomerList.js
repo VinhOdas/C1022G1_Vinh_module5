@@ -6,8 +6,7 @@ import {  NavLink } from "react-router-dom";
 export default function CustomerList()  {
     return (
       <div>
-        {/* <Header />
-        <Navigation /> */}
+
 
         <div>
           <button className="btn btn-primary btn-outline-secondary btn-sm">

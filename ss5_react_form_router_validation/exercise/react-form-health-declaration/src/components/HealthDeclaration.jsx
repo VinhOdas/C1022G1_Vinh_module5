@@ -52,8 +52,7 @@ export default function HealthDeclaration() {
           }, 3000)
         }}
       >
-        {
-          ({ isSubmitting }) => (
+        {({ isSubmitting }) => (
             <Form>
 
               <div className="container">
