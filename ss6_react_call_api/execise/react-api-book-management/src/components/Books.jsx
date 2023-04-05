@@ -8,7 +8,6 @@ import * as BookService from './service/BookService'
 
 export default function Books() {
     let navigate = useNavigate()
-
     const [book, setBook] = useState([])
 
     useEffect(() => {
@@ -42,11 +41,11 @@ export default function Books() {
                             <tbody align="center">
                                 {
                                     book.map((bookList, index) => (
-                                        <tr>
+                                        <tr key={index}>
                                             <td>{bookList.title}</td>
                                             <td>{bookList.quantity}</td>
-                                            <td border="1"><button className='btn btn-warning'>
-                                                <NavLink to='books/edit/'>
+                                            <td border="1"><button style={{textDecoration: "none"}} className='btn btn-warning'>
+                                                <NavLink to={`edit/${bookList.id}`}>
                                                 Edit
                                                 </NavLink>
                                                 </button>

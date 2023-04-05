@@ -18,7 +18,24 @@ export const save = async (values) =>{
     try{
         await axios.post(APIBOOKS, {...values})
     }
-    catch(e){
+    catch(e){ 
         console.log(e);
     }
 }
+
+export const saveEdit = async (id, values) =>{
+    try{
+        await axios.get(APIBOOKS + '/'+ id, values)  
+      }
+    catch(e){ 
+        console.log(e);
+    }
+}
+
+// export const findById = async(id) =>{
+//     try {
+//         await axios.get(APIBOOKS + '/'+ id)
+//     } catch (error) {
+        
+//     }
+// }
