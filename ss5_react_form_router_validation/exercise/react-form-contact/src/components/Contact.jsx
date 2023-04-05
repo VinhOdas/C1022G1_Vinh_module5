@@ -6,8 +6,6 @@ import { Audio } from 'react-loader-spinner'
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
-
 export default function Contact() {
     return (
 

@@ -3,6 +3,7 @@ import Header from '../home/Header'
 import Navigation from '../home/Navigation'
 import Footer from '../home/Footer'
 import   ContractData from './model/Contract'
+import { NavLink } from 'react-router-dom'
 
 export default function contractLists() {
   
@@ -19,7 +20,8 @@ export default function contractLists() {
     >
       <span className="fa-solid fa-plus text-light h6 my-auto me-1" />
       <span className="text-light">
-        Add New Contract
+        <NavLink to='/contracts/add'>Add New Contract</NavLink>
+        
       </span>
     </button>
   </div>

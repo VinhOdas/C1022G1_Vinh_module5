@@ -46,7 +46,7 @@ import Navigation from './Navigation'
           <div className="card-body" align="center">
             <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 101-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
-            <NavLink to="/#" className="btn btn-primary">Đặt phòng</NavLink>
+            <NavLink to="/#" className="btn btn-white">Bookings</NavLink>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ import Navigation from './Navigation'
           <div className="card-body" align="center">
             <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 102-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
-            <NavLink to="/#" className="btn btn-primary">Đặt phòng</NavLink>
+            <NavLink to="/#" className="btn btn-white">Bookings</NavLink>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ import Navigation from './Navigation'
           <div className="card-body" align="center">
             <strong><h1 className="card-title " style={{color: 'red'}}>Phòng 103-VIP</h1></strong>
             <p className="card-text">Giá: 1.500.000 đ</p>
-            <NavLink to="/#" className="btn btn-primary">Đặt phòng</NavLink>
+            <NavLink to="/#" className="btn btn-white">Bookings</NavLink>
           </div>
         </div>
       </div>
