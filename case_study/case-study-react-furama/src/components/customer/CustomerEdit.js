@@ -5,9 +5,9 @@ import Navigation from '../home/Navigation'
 export default function CustomerEdit()  {
     return (
       <>
-        <Header />
+        {/* <Header />
 
-        <Navigation />
+        <Navigation /> */}
 
         <div className="container">
           <div className="row">
@@ -107,7 +107,7 @@ export default function CustomerEdit()  {
             <div className="col-md-3"></div>
           </div>
         </div>
-        <Footer />
+        
       </>
     )
   }
