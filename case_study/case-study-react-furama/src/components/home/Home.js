@@ -6,9 +6,7 @@ import Navigation from './Navigation'
  function Home()  {
     return (<>
           <Header/>
-            <div className="sticky-top">
-                <Navigation/>
-            </div>
+         
             <div className="container-fluid">
             <div className="row ">
             <div style={{background: '#046056'}} className="col-2 col-lg-2 col-md-2 col-xl-2 col-sm-2">

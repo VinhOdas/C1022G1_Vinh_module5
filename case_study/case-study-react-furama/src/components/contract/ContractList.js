@@ -9,8 +9,8 @@ export default function contractLists() {
   
   return (
     <div>
-      <Header/>
-        <Navigation/>
+      {/* <Header/>
+        <Navigation/> */}
         <div>
   <div className="container-fluid">
     <button

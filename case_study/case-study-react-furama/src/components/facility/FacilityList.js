@@ -9,8 +9,8 @@ function FacilityList() {
   return (
       
     <div>
-      <Header/>
-      <Navigation />
+      {/* <Header/>
+      <Navigation /> */}
       <div className="container-fluid">
         <div>
           <button className="btn btn-primary btn-outline-secondary btn-sm" data-bs-toggle="modal"
@@ -75,7 +75,7 @@ function FacilityList() {
 
         </div>
       </div>
-      <Footer />
+      
     </div>
 
 

@@ -8,8 +8,8 @@ export default function CustomerAdd()  {
 
     return (
       <div>
-        <Header />
-        <Navigation />
+        {/* <Header />
+        <Navigation /> */}
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -118,7 +118,7 @@ export default function CustomerAdd()  {
           </div>
         </div>
 
-        <Footer />
+        
       </div>
     )
   }

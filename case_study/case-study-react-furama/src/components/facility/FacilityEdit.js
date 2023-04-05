@@ -4,7 +4,7 @@ import Header from '../home/Header'
 export default function FacilityEdit() {
     return (
       <div>
-<Header></Header>
+{/* <Header></Header> */}
         <section id="input-mask-wrapper">
           <div className="row">
             <div className="col-md-12">
@@ -108,7 +108,7 @@ export default function FacilityEdit() {
 
           </div>
         </section>
-        <Footer />
+        
             <div className="col-12">
               <button type="reset" className="btn btn-primary me-1 waves-effect waves-float waves-light">Submit</button>
               <button type="reset" className="btn btn-outline-secondary waves-effect">Reset</button>

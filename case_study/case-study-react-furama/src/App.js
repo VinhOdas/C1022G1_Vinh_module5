@@ -9,28 +9,39 @@ import ContractList from './components/contract/ContractList';
 import FacilityAdd from './components/facility/FacilityAdd';
 import FacilityEdit from './components/facility/FacilityEdit';
 import ContractAdd from './components/contract/ContractAdd';
+import Header from './components/home/Header';
+import Navigation from './components/home/Navigation';
+import Footer from './components/home/Footer';
 
 
 
 function App() {
   return (
-  
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/customers' element={<CustomerList/>} />
-      <Route path='/customers/add' element={<CustomerAdd/>} />
-      <Route path='/facility' element={<FacilityList/>} />
-      <Route path='/contracts' element={<ContractList/>} />
-      <Route path='/facility/add' element={<FacilityAdd/>} />
-      <Route path='/facility/edit/:id' element={<FacilityEdit/>} />
-      <Route path='/contracts/add' element={<ContractAdd/>} />
-    </Routes>
-    </BrowserRouter>
-  
-    
-  
-   
+
+    <>
+      <Header />
+
+      <BrowserRouter>
+        <div className="sticky-top">
+          <Navigation />
+        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/customers' element={<CustomerList />} />
+          <Route path='/customers/add' element={<CustomerAdd />} />
+          <Route path='/facility' element={<FacilityList />} />
+          <Route path='/contracts' element={<ContractList />} />
+          <Route path='/facility/add' element={<FacilityAdd />} />
+          <Route path='/facility/edit/:id' element={<FacilityEdit />} />
+          <Route path='/contracts/add' element={<ContractAdd />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </>
+
+
+
+
   );
 }
 

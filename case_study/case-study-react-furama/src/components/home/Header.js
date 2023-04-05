@@ -6,7 +6,7 @@
 
    <img className='header__logo' alt='' src="images/frf.png" style={{marginLeft: '-18px'}} ></img>
     
-    <div class="header__contact d-flex">
+    <div className="header__contact d-flex">
 
       <div className="address flex-fill">
         <div className="d-flex">

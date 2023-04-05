@@ -6,7 +6,7 @@ export default function FacilityAdd()  {
  
     return (
       <div>
-        <Header></Header>
+        {/* <Header></Header> */}
 
         <section id="input-mask-wrapper">
           <div className="row">
@@ -109,7 +109,7 @@ export default function FacilityAdd()  {
             </div>
           </div>
         </section>
-        <Footer />
+        
 
       </div>
     )
