@@ -262,13 +262,8 @@ export default function HealthDeclaration() {
                           Người bệnh có biểu hiện(Ho, Sốt,.....)
                           </label>
                           </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {
+
+                          {
                   isSubmitting ?
                     <Audio
                       height="80"
@@ -279,9 +274,17 @@ export default function HealthDeclaration() {
                       wrapperStyle
                       wrapperClass
                     />
-                    : <button type="submit">  Submit  </button>
+                    : <button className='btn btn-danger' type="submit">  Submit  </button>
 
                 }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+             
               </div>
 
 

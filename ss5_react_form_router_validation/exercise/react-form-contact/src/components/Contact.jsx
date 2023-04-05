@@ -71,14 +71,14 @@ export default function Contact() {
                           wrapperStyle
                           wrapperClass
                         />
-                        :<button type="submit">  Submit  </button>
+                        :<button style={{backgroundColor: 'red'}} type="submit">  Submit  </button>
     
                         }
                     </Form>
                 )}
 
             </Formik>
-                  <ToastContainer/>          
+                  <ToastContainer style={{backgroundColor: 'green'}}/>          
         </div>
         
     )
