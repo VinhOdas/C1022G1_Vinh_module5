@@ -47,7 +47,7 @@ export default function BookEdit() {
                             <div className="row">
                                     <div className="card">
                                         <div className="card-header">
-                                            <strong id="inDam"><h1 className="card-title" style={{ color: 'red' }}>Add Books</h1></strong>
+                                            <strong id="inDam"><h1 className="card-title" style={{ color: 'red' }}>Edit Books</h1></strong>
                                         </div>
 
 
