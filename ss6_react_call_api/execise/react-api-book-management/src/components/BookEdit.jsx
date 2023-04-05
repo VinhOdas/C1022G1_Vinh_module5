@@ -10,8 +10,8 @@ import { toast } from 'react-toastify'
 export default function BookEdit() {
     let navigate = useNavigate()
 
-    const [book, setBook] = useState([])
-    const [bookEdit, SetBookEdit] = useState({});
+    // const [book, setBook] = useState([])
+    // const [bookEdit, SetBookEdit] = useState({});
 
     // const {id} = useParams;
     // const [values, setValues] = useState({
@@ -21,19 +21,17 @@ export default function BookEdit() {
   return (
     <>
          <Formik
-                initialValues={{ title: bookEdit.title, quantity:bookEdit.quantity  }}
+                initialValues={{id: '', title: '', quantity:''  }}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
-                        const editBook = async () => {
-                                await BookService.saveEdit(bookEdit.id, values);
-                                let result = await BookService.findAll();
-                                setBook(result)
+                        const editBook = async (id, values) => {
+                                await BookService.saveEdit(id, values);
                             setSubmitting(false)
                             toast("edit thành công")
                             navigate('/books')
 
                         }
-                        editBook()
+                        editBook(values.id, values)
 
                     }, 500)
 

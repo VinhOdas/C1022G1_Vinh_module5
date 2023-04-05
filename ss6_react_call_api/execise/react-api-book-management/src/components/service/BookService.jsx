@@ -25,17 +25,17 @@ export const save = async (values) =>{
 
 export const saveEdit = async (id, values) =>{
     try{
-        await axios.get(APIBOOKS + '/'+ id, values)  
+        await axios.patch(APIBOOKS + '/'+ id, {...values})  
       }
     catch(e){ 
         console.log(e);
     }
 }
 
-// export const findById = async(id) =>{
-//     try {
-//         await axios.get(APIBOOKS + '/'+ id)
-//     } catch (error) {
+export const findById = async(id) =>{
+    try {
+        await axios.get(APIBOOKS + '/'+ id)
+    } catch (error) {
         
-//     }
-// }
+    }
+}
