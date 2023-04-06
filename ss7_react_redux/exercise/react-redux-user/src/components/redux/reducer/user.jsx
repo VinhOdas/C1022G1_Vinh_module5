@@ -1,4 +1,4 @@
-import { GET_ALL_USERS } from "../action/types";
+import { DELETE_USERS, GET_ALL_USERS } from "../action/types";
 
 const initialState = []
 const userReducer = (users = initialState, action) =>{
@@ -8,7 +8,15 @@ const userReducer = (users = initialState, action) =>{
         case GET_ALL_USERS:
             
             return payload
-            
+        
+            case DELETE_USERS:
+
+            return {
+                ...state,
+                users: state.users.filter(user => user.id !== action.payload),
+                error: null,
+                loading: false
+            };
     
     default:
         return users;

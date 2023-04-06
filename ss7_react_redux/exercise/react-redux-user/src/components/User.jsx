@@ -11,6 +11,7 @@ export default function User() {
     useEffect(() => {
 
         dispatch(getAllUsers());
+        
     }, []);
 
     const handleDelete = (id) =>{
