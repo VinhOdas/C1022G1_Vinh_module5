@@ -17,6 +17,10 @@ export default function Books() {
         }
         listBook()
     }, [])
+
+    const handleUpdate = (id) => {
+        navigate(`/books/edit/${id}`);
+    }
     return (
         <>
 
@@ -44,10 +48,13 @@ export default function Books() {
                                         <tr key={index}>
                                             <td>{bookList.title}</td>
                                             <td>{bookList.quantity}</td>
-                                            <td border="1"><button style={{textDecoration: "none"}} className='btn btn-warning'>
-                                                <NavLink to={`edit/${bookList.id}`}>
+                                            <td border="1">
+                                                <button onClick={()=>  handleUpdate(bookList.id)} style={{textDecoration: "none"}} className='btn btn-warning'>
+
                                                 Edit
-                                                </NavLink>
+                                                {/* <NavLink to={`edit/${bookList.id}`}>
+                                                Edit
+                                                </NavLink> */}
                                                 </button>
                                                 <button className='btn btn-warning'>Delete</button></td>
                                         </tr>

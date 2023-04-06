@@ -26,7 +26,7 @@ export default function Todo() {
     <>
 
       <Formik
-        initialValues={{ name: '' }}
+        initialValues={{ title: '' }}
 
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -51,7 +51,7 @@ export default function Todo() {
           <Form>
             <h1>To do List</h1>
             <div>
-              <Field type='text' name="name" className="form-control" />
+              <Field type='text' name="title" className="form-control" />
             </div>
             {
               isSubmitting ?
@@ -85,7 +85,7 @@ export default function Todo() {
           {
             todo.map((todoList, index) => (
               <tr key={index}>
-              <td>{todoList.name}</td>
+              <td>{todoList.title}</td>
             </tr>
 
             ))
