@@ -9,19 +9,18 @@ import { toast } from 'react-toastify'
 
 export default function BookEdit() {
     let navigate = useNavigate()
+    const bookForm = ({bookss}) =>{
+        const initialValues = {
+            title: bookss.title,
+             quantity:bookss.quantity
+        };
+    }
 
-    // const [book, setBook] = useState([])
-    // const [bookEdit, SetBookEdit] = useState({});
-
-    // const {id} = useParams;
-    // const [values, setValues] = useState({
-    //     id: id,
-        
-    // })
+   
   return (
     <>
          <Formik
-                initialValues={{id: '', title: '', quantity:''  }}
+                initialValues={{   }}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                         const editBook = async (id, values) => {
