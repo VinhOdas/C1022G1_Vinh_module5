@@ -4,9 +4,15 @@ const getAllUser = () => {
     return request.get('/user')
 };
 
+const deleteUser = (id) => {
+    return request.delete(`/user/${id}`)
+};
+
 
 const userService = {
-    getAllUser
+    getAllUser,deleteUser
 }
+
+
 
 export default userService
