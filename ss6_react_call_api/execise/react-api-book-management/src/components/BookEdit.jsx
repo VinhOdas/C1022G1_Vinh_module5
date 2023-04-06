@@ -1,41 +1,49 @@
 import { Field, Form, Formik } from 'formik'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Audio } from 'react-loader-spinner'
 import * as BookService from './service/BookService'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify'
+    
 
-
+  
 export default function BookEdit() {
+    const [book, setBook] = useState([])
+    const {id} = useParams();
     let navigate = useNavigate()
 
-    // const [book, setBook] = useState([])
-    // const [bookEdit, SetBookEdit] = useState({});
+    
+    useEffect(() => {
+        const booksEdit = async() =>{
+            const result = await BookService.findById(id);
+            setBook(result)
+        }
+        booksEdit()
+    }, [id])
+    
 
-    // const {id} = useParams;
-    // const [values, setValues] = useState({
-    //     id: id,
-        
-    // })
+
+    const handleUpdate = async (values) => {
+        try {
+            await BookService.saveEdit(values);
+            console.log(values)
+            toast('Sửa thành công!');
+            navigate('/books');
+        } catch (err) {
+            console.log(err);
+        }
+    }
   return (
     <>
          <Formik
-                initialValues={{id: '', title: '', quantity:''  }}
-                onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        const editBook = async (id, values) => {
-                                await BookService.saveEdit(id, values);
+                initialValues={{id: book.id, title: book.title, quantity: book.quantity }}
+                onSubmit={async (values) => {
+                   
+                            await handleUpdate(values);
                             setSubmitting(false)
-                            toast("edit thành công")
-                            navigate('/books')
+                          
 
-                        }
-                        editBook(values.id, values)
-
-                    }, 500)
-
-                
 
                 }}
         >
@@ -65,7 +73,7 @@ export default function BookEdit() {
                                             <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
                                                 <label className="form-label" >Quantity</label>
                                                 <div className="input-group input-group-merge">
-                                                    <Field  type='text' placeholder='' name='quantity' className='form-control' />
+                                                    <Field    type='text' placeholder='' name='quantity' className='form-control' />
                                                 </div>
                                                 <br></br>
                                             </div>

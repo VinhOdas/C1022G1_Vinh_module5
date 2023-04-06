@@ -2,6 +2,8 @@ import './App.css'
 import Books from './components/Books'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import BooksAdd from './components/BookAdd'
+import BookEdit from './components/BookEdit'
+
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
       <Routes>
         <Route path='books' element={<Books/>} />
         <Route path='books/add' element={<BooksAdd/>} />
-        <Route path='books/edit/:id' element={<BooksAdd/>} />
+        <Route path='books/edit/:id' element={<BookEdit/>} />
       </Routes>
       </BrowserRouter>
     </>

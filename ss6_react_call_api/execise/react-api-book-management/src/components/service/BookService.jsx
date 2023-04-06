@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const APIBOOKS = 'http://localhost:3000/books'
+export const APIBOOKS = `http://localhost:3000/books`
 
 export const findAll = async () => {
 
@@ -23,9 +23,9 @@ export const save = async (values) =>{
     }
 }
 
-export const saveEdit = async (id, values) =>{
+export const saveEdit = async ( book) =>{
     try{
-        await axios.patch(APIBOOKS + '/'+ id, {...values})  
+        await axios.patch(APIBOOKS + `/${book.id}`, {...book})  
       }
     catch(e){ 
         console.log(e);
@@ -34,7 +34,8 @@ export const saveEdit = async (id, values) =>{
 
 export const findById = async(id) =>{
     try {
-        await axios.get(APIBOOKS + '/'+ id)
+        const result =   await axios.get(APIBOOKS + `/${id}`)
+        return result
     } catch (error) {
         
     }
