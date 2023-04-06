@@ -11,7 +11,27 @@ export default function BookEdit() {
     const [book, setBook] = useState(null)
     const { id } = useParams();
     let navigate = useNavigate()
+    const bookForm = ({bookss}) =>{
+        const initialValues = {
+            title: bookss.title,
+             quantity:bookss.quantity
+        };
+    }
 
+<<<<<<< HEAD
+   
+  return (
+    <>
+         <Formik
+                initialValues={{   }}
+                onSubmit={(values, { setSubmitting }) => {
+                    setTimeout(() => {
+                        const editBook = async (id, values) => {
+                                await BookService.saveEdit(id, values);
+                            setSubmitting(false)
+                            toast("edit thành công")
+                            navigate('/books')
+=======
 
     useEffect(() => {
         const booksEdit = async () => {
@@ -20,6 +40,7 @@ export default function BookEdit() {
         }
         booksEdit()
     }, [id])
+>>>>>>> 9800b6957217ff10026b3d3bc1af828e1d6d8f96
 
 
 

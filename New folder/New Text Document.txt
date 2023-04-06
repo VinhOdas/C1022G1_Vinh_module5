@@ -1,0 +1,39 @@
+import { Formik, Form, Field } from 'formik';
+import axios from 'axios';
+
+const BlogForm = ({ blog }) => {
+  const initialValues = {
+    title: blog.title,
+    author: blog.author,
+    content: blog.content,
+  };
+
+  const onSubmit = (values) => {
+    axios.patch(`http://localhost:3000/blogs/${blog.id}`, values)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  return (
+    <Formik initialValues={initialValues} onSubmit={onSubmit}>
+      <Form>
+        <label htmlFor="title">Title</label>
+        <Field type="text" name="title" />
+
+        <label htmlFor="author">Author</label>
+        <Field type="text" name="author" />
+
+        <label htmlFor="content">Content</label>
+        <Field type="text" name="content" />
+
+        <button type="submit">Update Blog</button>
+      </Form>
+    </Formik>
+  );
+};
+
+export default BlogForm;
