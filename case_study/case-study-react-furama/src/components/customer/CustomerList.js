@@ -20,11 +20,10 @@ export default function CustomerList()  {
       const res = await CustomerService.getAllCustomertype()
        
       setcustomerType(res)
-      return customerType
     }
     listCustomerType()
 
-  },[])
+  })
     return (
       <div>
 
@@ -70,7 +69,10 @@ export default function CustomerList()  {
                     <td >{customerLists.phoneNumber}</td>
                     <td>{customerLists.email}</td>
                     <td>{customerLists.address}</td>
-                    <td >{customerLists.customerTypes.{customerType.map(customerType)}}</td>
+                    {customerLists.customerTypes[customerType.map((customerTypeList, index)=>(
+                      <td key={customerTypeList.id}>{customerTypeList.name}</td>
+                    ))]
+                    }
                     <td>
 
                       <NavLink to={`/customers/edit/${customerLists.id}`} className="btn btn-warning btn-outline-secondary btn-nm">

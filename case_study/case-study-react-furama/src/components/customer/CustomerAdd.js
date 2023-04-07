@@ -34,7 +34,7 @@ export default function CustomerAdd() {
           phoneNumber: '',
           email: '',
           address: '',
-          customerType: []
+          customerTypes: []
         }}
         onSubmit={(values )=> {
           const submitAddCustomer = async () => {
