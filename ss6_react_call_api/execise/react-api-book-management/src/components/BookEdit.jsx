@@ -18,29 +18,8 @@ export default function BookEdit() {
         };
     }
 
-<<<<<<< HEAD
-   
-  return (
-    <>
-         <Formik
-                initialValues={{   }}
-                onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        const editBook = async (id, values) => {
-                                await BookService.saveEdit(id, values);
-                            setSubmitting(false)
-                            toast("edit thành công")
-                            navigate('/books')
-=======
 
-    useEffect(() => {
-        const booksEdit = async () => {
-            const result = await BookService.findById(id);
-            setBook(result)
-        }
-        booksEdit()
-    }, [id])
->>>>>>> 9800b6957217ff10026b3d3bc1af828e1d6d8f96
+
 
 
 

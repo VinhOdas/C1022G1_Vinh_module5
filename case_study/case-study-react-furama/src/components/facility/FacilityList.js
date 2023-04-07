@@ -61,7 +61,7 @@ function FacilityList() {
                       <td>{facilityLists.rentType.name}</td>
                       <td>{facilityLists.facilityType.name}</td>
                       <td><button style={{backgroundColor: "greenyellow"}}>
-                        <NavLink to='/facility/edit/'{facilityLists.id} >Edit</NavLink>
+                        <NavLink to='/facility/edit/' >Edit</NavLink>
                         </button></td> 
                      <td><button style={{backgroundColor: "greenyellow"}}>Delete</button></td> 
                     </tr>
