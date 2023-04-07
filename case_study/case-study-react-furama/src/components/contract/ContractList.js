@@ -1,6 +1,5 @@
 import React from 'react'
-import Header from '../home/Header'
-import Navigation from '../home/Navigation'
+
 import Footer from '../home/Footer'
 import   ContractData from './model/Contract'
 import { NavLink } from 'react-router-dom'

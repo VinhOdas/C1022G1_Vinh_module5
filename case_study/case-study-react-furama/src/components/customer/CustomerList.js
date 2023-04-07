@@ -1,8 +1,20 @@
 
-import CustomerData from './model/Customer'
+import { useEffect, useState } from 'react';
 import {  NavLink } from "react-router-dom";
+import * as CustomerService from './service/CustomerService'
 
 export default function CustomerList()  {
+  const [customer, setCustomer] = useState([])
+
+  useEffect(() =>{
+    const listCustomer = async() =>{
+      const res = await CustomerService.getAll()
+       await CustomerService.getAllCustomertype()
+      setCustomer(res)
+    }
+    listCustomer()
+
+  },[])
     return (
       <div>
 
@@ -36,7 +48,7 @@ export default function CustomerList()  {
           </thead>
           <tbody align="center">
             {
-              CustomerData.customer.map((customerLists, index) => (
+              customer.map((customerLists, index) => (
 
               
                   <tr key={index}>
