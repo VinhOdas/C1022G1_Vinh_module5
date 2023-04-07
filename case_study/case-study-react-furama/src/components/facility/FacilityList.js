@@ -38,8 +38,6 @@ function FacilityList() {
               </tr>
             </thead>
             <tbody align="center">
-
-
               {
                 facilityData.facility.map((facilityLists, index) => (
               
@@ -57,7 +55,7 @@ function FacilityList() {
                       <td>{facilityLists.rentType.name}</td>
                       <td>{facilityLists.facilityType.name}</td>
                       <td><button style={{backgroundColor: "greenyellow"}}>
-                        <NavLink to='/facility/edit/' >Edit</NavLink>
+                        <NavLink to={`/facility/edit/${facilityLists.id}`} >Edit</NavLink>
                         </button></td> 
                      <td><button style={{backgroundColor: "greenyellow"}}>Delete</button></td> 
                     </tr>
