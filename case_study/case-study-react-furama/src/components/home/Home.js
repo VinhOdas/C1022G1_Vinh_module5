@@ -1,11 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import Footer from './Footer'
-import Header from './Header'
-import Navigation from './Navigation'
+
 
  function Home()  {
     return (<>
-          <Header/>
          
             <div className="container-fluid">
             <div className="row ">

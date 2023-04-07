@@ -1,16 +1,12 @@
 import React from 'react'
-import Footer from '../home/Footer'
-import Navigation from '../home/Navigation'
 import facilityData from './model/Facility'
-import Header from '../home/Header'
 import { NavLink } from 'react-router-dom'
 
 function FacilityList() {
   return (
       
     <div>
-      {/* <Header/>
-      <Navigation /> */}
+  
       <div className="container-fluid">
         <div>
           <button className="btn btn-primary btn-outline-secondary btn-sm" data-bs-toggle="modal"
