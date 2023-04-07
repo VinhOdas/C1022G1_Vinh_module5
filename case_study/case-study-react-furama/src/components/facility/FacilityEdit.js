@@ -1,10 +1,9 @@
-import Footer from '../home/Footer'
-import Header from '../home/Header'
+
 
 export default function FacilityEdit() {
     return (
       <div>
-{/* <Header></Header> */}
+
         <section id="input-mask-wrapper">
           <div className="row">
             <div className="col-md-12">

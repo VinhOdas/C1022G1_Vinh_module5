@@ -12,6 +12,7 @@ import ContractAdd from './components/contract/ContractAdd';
 import Header from './components/home/Header';
 import Navigation from './components/home/Navigation';
 import Footer from './components/home/Footer';
+import CustomerEdit from './components/customer/CustomerEdit';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/customers' element={<CustomerList />} />
           <Route path='/customers/add' element={<CustomerAdd />} />
+          <Route path='/customers/edit/:id' element={<CustomerEdit />} />
           <Route path='/facility' element={<FacilityList />} />
           <Route path='/contracts' element={<ContractList />} />
           <Route path='/facility/add' element={<FacilityAdd />} />

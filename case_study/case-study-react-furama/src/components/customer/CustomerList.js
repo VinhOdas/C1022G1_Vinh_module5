@@ -1,5 +1,4 @@
-import Header from '../home/Header'
-import Navigation from '../home/Navigation'
+
 import CustomerData from './model/Customer'
 import {  NavLink } from "react-router-dom";
 
@@ -51,14 +50,15 @@ export default function CustomerList()  {
                     <td>{customerLists.address}</td>
                     <td >{customerLists.customerType.name}</td>
                     <td>
-                      <button className="btn btn-warning btn-outline-secondary btn-nm">
+
+                      <NavLink to={`/customers/edit/${customerLists.id}`} className="btn btn-warning btn-outline-secondary btn-nm">
                         <span className="fa-solid fa-plus text-light h6 my-auto me-1"></span>
                         <span className="text-light text-align-center">
                           Edit
                           </span>
-                      </button>
+                      </NavLink>
                     </td>
-                    <td><button style={{ backgroundColor: "greenyellow" }}>Delete</button></td>
+                    <td><NavLink style={{ backgroundColor: "greenyellow" }}>Delete</NavLink></td>
                   </tr>
                
               ))
