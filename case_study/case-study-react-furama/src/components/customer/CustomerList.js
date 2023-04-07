@@ -5,14 +5,24 @@ import * as CustomerService from './service/CustomerService'
 
 export default function CustomerList()  {
   const [customer, setCustomer] = useState([])
+  const [customerType, setcustomerType] = useState([])
 
   useEffect(() =>{
     const listCustomer = async() =>{
       const res = await CustomerService.getAll()
-       await CustomerService.getAllCustomertype()
       setCustomer(res)
     }
     listCustomer()
+
+  },[])
+  useEffect(() =>{
+    const listCustomerType = async() =>{
+      const res = await CustomerService.getAllCustomertype()
+       
+      setcustomerType(res)
+      return customerType
+    }
+    listCustomerType()
 
   },[])
     return (
@@ -60,7 +70,7 @@ export default function CustomerList()  {
                     <td >{customerLists.phoneNumber}</td>
                     <td>{customerLists.email}</td>
                     <td>{customerLists.address}</td>
-                    <td >{customerLists.customerType.name}</td>
+                    <td >{customerLists.customerTypes.{customerType.map(customerType)}}</td>
                     <td>
 
                       <NavLink to={`/customers/edit/${customerLists.id}`} className="btn btn-warning btn-outline-secondary btn-nm">

@@ -8,10 +8,15 @@
     "phoneNumber": "0989888",
     "email": "6767@gmail.com",
     "address": "Quang Binh",
-    "customerType": {
-        "id": 2,
-        "name": "Platinium"
-    }
+    "customerTypes": [{
+      
+        "id": 1,
+        "name": "Diamond"
+    
+
+    }]
+
+    
     }
   ],
   "customerTypes": [

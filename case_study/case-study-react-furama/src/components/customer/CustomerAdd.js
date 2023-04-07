@@ -1,12 +1,29 @@
 
-import { NavLink } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage, } from 'formik'
 import * as Yup from 'yup'
+import { useEffect, useState } from "react";
+import * as CustomerService from './service/CustomerService'
 
 export default function CustomerAdd() {
   const REQUIRED_VALIDATION = 'Không được để trống'
+  const [customerAdd, setCustomerAdd] = useState([])
+  const navigate = useNavigate()
+  const [customerType, setcustomerType] = useState([])
 
+  useEffect(() => {
+    const listCustomerTypes = async () => {
+      const res = await CustomerService.getAllCustomertype()
+
+      setcustomerType(res)
+
+      return customerType
+
+    }
+    listCustomerTypes()
+  })
   return (
+
     <>
       <Formik
         initialValues={{
@@ -17,7 +34,17 @@ export default function CustomerAdd() {
           phoneNumber: '',
           email: '',
           address: '',
-          customerType: {}
+          customerType: []
+        }}
+        onSubmit={(values )=> {
+          const submitAddCustomer = async () => {
+            await CustomerService.save(values)
+            setCustomerAdd(values)
+            navigate('/customers')
+            return customerAdd
+          }
+          submitAddCustomer()
+
         }}
 
         validationSchema={Yup.object({
@@ -120,20 +147,28 @@ export default function CustomerAdd() {
 
                         <div className="col-xl-12 col-md-12 col-sm-12 mb-2">
                           <label className="form-label" htmlFor="customerType">customerType :</label>
-                          <select className="form-select" id="customerType" >
-                            <option >
+                          <Field component='select'  name="customerType" className="form-select" id="customerType" >
 
-                            </option>
-                          </select>
+                          {
+                            customerType.map((customerTypeList, index) =>(
+                              
+                                <option key={index} >
+                                    {customerTypeList.name}
+                                </option>
+                            ))
+
+                          }
+                          </Field>
+
+                         
+                            
+
                         </div>
 
                       </div>
                       <div className="col-12">
-                        <button className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
-                          <NavLink style={{ textDecoration: "none", color: "whitesmoke" }} to={'/customers/add'}>
+                        <button type="submit" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                             Add
-                          </NavLink>
-
                         </button>
                         <button style={{ marginLeft: '10%' }} type='reset' className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                           Reset
