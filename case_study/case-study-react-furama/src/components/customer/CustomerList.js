@@ -5,7 +5,7 @@ import * as CustomerService from './service/CustomerService'
 
 export default function CustomerList()  {
   const [customer, setCustomer] = useState([])
-  const [customerType, setcustomerType] = useState([])
+  // const [customerType, setcustomerType] = useState([])
 
   useEffect(() =>{
     const listCustomer = async() =>{
@@ -15,15 +15,15 @@ export default function CustomerList()  {
     listCustomer()
 
   },[])
-  useEffect(() =>{
-    const listCustomerType = async() =>{
-      const res = await CustomerService.getAllCustomertype()
+  // useEffect(() =>{
+  //   const listCustomerType = async() =>{
+  //     const res = await CustomerService.getAllCustomertype()
        
-      setcustomerType(res)
-    }
-    listCustomerType()
+  //     setcustomerType(res)
+  //   }
+  //   listCustomerType()
 
-  })
+  // })
     return (
       <div>
 
@@ -69,10 +69,8 @@ export default function CustomerList()  {
                     <td >{customerLists.phoneNumber}</td>
                     <td>{customerLists.email}</td>
                     <td>{customerLists.address}</td>
-                    {customerLists.customerTypes[customerType.map((customerTypeList, index)=>(
-                      <td key={customerTypeList.id}>{customerTypeList.name}</td>
-                    ))]
-                    }
+                    <td>{customerLists.customerTypes.name}</td>
+
                     <td>
 
                       <NavLink to={`/customers/edit/${customerLists.id}`} className="btn btn-warning btn-outline-secondary btn-nm">

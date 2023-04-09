@@ -1,0 +1,48 @@
+{
+  "books": [
+    {
+      "id": 4,
+      "title": "dasd",
+      "quantity": "sadasd",
+      "typeBook": {
+        "id": 1,
+      "name": "Tieu Thuyet"
+      }
+    },
+    {
+      "title": "sdsd",
+      "quantity": "asdsd",
+      "id": 5,
+      "typeBook": {
+        "id": 1,
+      "name": "Tieu Thuyet"
+      }
+    },
+    {
+      "title": "sadasd",
+      "quantity": "sadasd",
+      "id": 6,
+      "typeBook": {
+        "id": 1,
+      "name": "Tieu Thuyet"
+      }
+    }
+  ],
+
+  "typeBook": [
+    {
+      "id": 1,
+      "name": "Tieu Thuyet"
+    },
+    {
+      "id": 2,
+      "name": "Giao Khoa"
+    },
+    {
+      "id": 3,
+      "name": "Bai Tap"
+    }
+  ]
+
+ 
+}

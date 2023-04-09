@@ -8,13 +8,12 @@
     "phoneNumber": "0989888",
     "email": "6767@gmail.com",
     "address": "Quang Binh",
-    "customerTypes": [{
+    "customerTypes": {
       
         "id": 1,
         "name": "Diamond"
-    
 
-    }]
+    }
 
     
     }

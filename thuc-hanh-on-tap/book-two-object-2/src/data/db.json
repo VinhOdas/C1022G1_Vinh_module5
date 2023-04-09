@@ -1,0 +1,104 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "quantity": "sadasdsad",
+      "typeBooks": 1
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "quantity": "sadasdsad",
+      "typeBooks": 1
+    },
+    {
+      "title": "sadasd",
+      "quantity": "sadsad",
+      "typeBooks": 2,
+      "id": 3
+    },
+    {
+      "title": "sadsad",
+      "quantity": "sadsad",
+      "typeBooks": 2,
+      "id": 4
+    },
+    {
+      "title": "áds",
+      "quantity": "sadasd",
+      "typeBooks": 2,
+      "id": 5
+    },
+    {
+      "title": "ádaaaaaaaaaaaaaa",
+      "quantity": "aaaaaaaaa",
+      "typeBooks": 2,
+      "id": 6
+    },
+    {
+      "title": "sadasd",
+      "quantity": "sadasd",
+      "typeBooks": 1,
+      "id": 7
+    },
+    {
+      "title": "gggggggg",
+      "quantity": "sadsad",
+      "typeBooks": 1,
+      "id": 8
+    },
+    {
+      "title": "gggggggg",
+      "quantity": "ffffffff",
+      "typeBooks": 2,
+      "id": 9
+    },
+    {
+      "title": "",
+      "quantity": "",
+      "typeBooks": 1,
+      "id": 10
+    },
+    {
+      "title": "",
+      "quantity": "",
+      "typeBooks": 1,
+      "id": 11
+    },
+    {
+      "title": "",
+      "quantity": "",
+      "typeBooks": 1,
+      "id": 12
+    },
+    {
+      "title": "sadsad",
+      "quantity": "sadsad",
+      "typeBooks": 1,
+      "id": 13
+    },
+    {
+      "title": "ád",
+      "quantity": "sad",
+      "typeBooks": 1,
+      "id": 14
+    },
+    {
+      "title": "sadsad",
+      "quantity": "sadsad",
+      "typeBooks": 1,
+      "id": 15
+    }
+  ],
+  "typeBooks": [
+    {
+      "id": 1,
+      "name": "Giao Khoa"
+    },
+    {
+      "id": 2,
+      "name": "Giao Khoa 1"
+    }
+  ]
+}
