@@ -8,8 +8,7 @@ export default function contractLists() {
   
   return (
     <div>
-      {/* <Header/>
-        <Navigation/> */}
+   
         <div>
   <div className="container-fluid">
     <button

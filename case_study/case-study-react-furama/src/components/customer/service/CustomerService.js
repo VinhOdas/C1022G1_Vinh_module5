@@ -17,3 +17,7 @@ export const save = async (values) => {
     await axios.post(URLAPI + `/`, { ...values })
 
 }
+
+export const remove = async(id) =>{
+    await axios.delete(URLAPI + `/customers/${id}`)
+}

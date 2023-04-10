@@ -16,7 +16,7 @@ export default function CustomerEdit()  {
           phoneNumber: '',
           email: '',
           address: '',
-          customerType: {}
+          customerType: 1
         }}
 
         validationSchema={Yup.object({

@@ -1,23 +1,24 @@
-import axios  from 'axios'
+
+import axios from 'axios'
 
 export const findAll = async() =>{
-    try {
-        let res = await axios.get(`http://localhost:3000/books`)
-
+   try {
+    const res = await axios.get(`http://localhost:3000/typeBook`)
     return res.data
-    } catch (error) {
-        
-    }
     
-}
+   } catch (error) {
+    console.log(error);
 
-export const findAllCustomerType = async() =>{
-    try {
-        let res = await axios.get(`http://localhost:3000/typeBook`)
+   }
+} 
 
+export const findAllTypeBook = async() =>{
+   try {
+    const res = await axios.get(`http://localhost:3000/typeBook`)
     return res.data
-    } catch (error) {
-        
-    }
     
-}
+   } catch (error) {
+    console.log(error);
+    
+   }
+} 
