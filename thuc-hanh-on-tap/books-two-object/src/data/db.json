@@ -1,0 +1,35 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "dasd",
+      "typeId": 1,
+      "quantity": "sadasd"
+    },
+    {
+      "title": "sdsd",
+      "quantity": "asdsd",
+      "typeId": 1,
+      "id": 2
+    },
+    {
+      "title": "sadasd",
+      "quantity": "sadasd",
+      "typeId": 1,
+      "id": 3
+    }
+  ],
+
+  "typeBook": [
+    {
+      "id" : 1,
+      "name": "Giao Khoa"
+    },
+    {
+      "id" : 2,
+      "name": "Giao Khoa1"
+    }
+
+  ]
+ 
+}
