@@ -1,12 +1,41 @@
 import React from 'react'
+import {ErrorMessage, Field, Form, Formik} from 'formik'
+import * as Yup from 'yup'
 
 
 export default function ContractAdd() {
+  const REQUIRED_VALIDATION = 'Không được để trống'
 
   return (
     <>
-
-<div id="input-mask-wrapper">
+    <Formik
+    initialValues={{
+      startDate: '',
+      endDate: '',
+      deposit: '',
+      customer: 1,
+      facility: 1,
+      rentType: 1,
+      standardRoom: '',
+      descriptionOtherCovenience: '',
+      poolArea: '',
+      numberOfFloors: '',
+      facilityFree: '',
+      status: false
+    }}
+    validationSchema={Yup.object({
+      startDate: Yup.string().required(REQUIRED_VALIDATION),
+      endDate: Yup.string().required(REQUIRED_VALIDATION),
+      deposit: Yup.number().required(REQUIRED_VALIDATION),
+      standardRoom: Yup.string().required(REQUIRED_VALIDATION),
+      descriptionOtherCovenience: Yup.string().required(REQUIRED_VALIDATION),
+      poolArea: Yup.number().required(REQUIRED_VALIDATION),
+      numberOfFloors:  Yup.string().required(REQUIRED_VALIDATION),
+      facilityFree:  Yup.string().required(REQUIRED_VALIDATION)
+    })}
+    >
+      <Form>
+      <div id="input-mask-wrapper">
   <div className="row">
     <div className="col-md-12">
       <div className="card">
@@ -42,19 +71,30 @@ export default function ContractAdd() {
 
 
               <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
+                <div>
                 <label className="form-label" htmlFor="dayStart">Day Start:</label>
-                <input type="date" className="form-control time-mask" placeholder="?" id="dayStart" />
+                <Field type="date" name='startDate' className="form-control time-mask" placeholder="?" id="dayStart" />
+                </div>
+                <ErrorMessage name='startDate' component='span' className='form-err' />
 
               </div>
               <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
+                <div>
                 <label className="form-label" htmlFor="endDateForm">End Day:</label>
-                <input type="text" className="form-control numeral-mask" placeholder="input number people" id="endDateForm"/>
+                <Field type="text" name='endDate' className="form-control numeral-mask" placeholder="input number people" id="endDateForm"/>
+                </div>
+                <ErrorMessage name='endDate' component='span' className='form-err' />
 
 
               </div>
               <div className="col-xl-4 col-md-6 col-sm-12 mb-2">
+                <div>
                 <label className="form-label" htmlFor="deposit">Deposit(VNĐ):</label>
-                <input type="number" className="form-control block-mask" placeholder="giá" id="deposit" />
+                <Field type="number" name='deposit'  className="form-control block-mask" placeholder="giá" id="deposit" />
+                </div>
+                <ErrorMessage name='deposit' component='span' className='form-err' />
+
+               
 
               </div>
 
@@ -69,6 +109,11 @@ export default function ContractAdd() {
     </div>
   </div>
 </div>
+      </Form>
+
+    </Formik>
+
+
     </>
   )
 }
