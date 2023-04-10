@@ -55,7 +55,6 @@ export const findById = async(id) =>{
 export const remove = async(id) =>{
     try {
          await axios.delete(`http://localhost:3000/books/${id}`)
-            alert("ok!!!!!!!!")
     } catch (error) {
         console.log(error);
         

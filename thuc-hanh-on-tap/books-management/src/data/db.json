@@ -1,34 +1,22 @@
 {
   "books": [
     {
-      "id": 4,
-      "title": "dasdsad",
-      "quantity": "ssssss",
-      "typeId": "2"
-    },
-    {
-      "id": 5,
-      "title": "vinh",
-      "quantity": "sads",
-      "typeId": "2"
-    },
-    {
       "id": 6,
       "title": "sadasd",
       "quantity": "sssssssssss",
       "typeId": "1"
     },
     {
-      "title": "",
-      "quantity": "",
-      "typeId": 1,
-      "id": 7
-    },
-    {
       "id": 8,
       "title": "vinhodas",
       "quantity": "hhhhhhhhhhhh",
       "typeId": "1"
+    },
+    {
+      "title": "sadsad",
+      "quantity": "sadasd",
+      "typeId": 1,
+      "id": 9
     }
   ],
   "typeBook": [

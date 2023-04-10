@@ -20,7 +20,11 @@ export default function BookAdd() {
 
     <>
     <Formik initialValues={{title: '' , quantity: '', typeId: 1}}
+       
         onSubmit={(values ) =>{
+            if(typeof values === 'string'){
+                values.typeId = parseInt(values.typeId)
+            }
                const addBook = async () =>{
                 await BookService.save(values)
                 setBookAdd(values)

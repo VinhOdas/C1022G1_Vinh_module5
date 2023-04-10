@@ -9,6 +9,7 @@ const handleDelete = async(id) =>{
   await CustomerService.remove(id)
   props.findAllList()
 
+
 }
 
   return (
@@ -26,7 +27,7 @@ const handleDelete = async(id) =>{
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button onClick={() =>handleDelete(props.id)}   type="button" class="btn btn-primary">Save changes</button>
+        <button onClick={() =>handleDelete(props.id)}   type="button"  data-bs-dismiss="modal"  class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

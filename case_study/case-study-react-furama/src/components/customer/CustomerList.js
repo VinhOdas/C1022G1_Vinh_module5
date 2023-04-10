@@ -81,7 +81,9 @@ export default function CustomerList() {
                 <td>{index + 1}</td>
                 <td>{customerLists.name}</td>
                 <td>{customerLists.dateOfBirth}</td>
-                <td>{customerLists.gender}</td>
+                <td>{parseInt(customerLists.gender) === 1 ? "Nam":"Nu" &&
+                    parseInt(customerLists.gender) === 0 ? "Nu": "LGBT"&&
+                    parseInt(customerLists.gender) === 2 ? "LGBT": "Sai" }</td>
                 <td>{customerLists.idCard}</td>
                 <td >{customerLists.phoneNumber}</td>
                 <td>{customerLists.email}</td>
