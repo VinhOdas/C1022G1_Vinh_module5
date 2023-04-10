@@ -5,18 +5,26 @@ import { NavLink, useNavigate } from 'react-router-dom'
 export default function Book() {
     let navigate = useNavigate()
     const [book, setBook] = useState([])
+    const [type, setType] = useState([])
+    const listBook = async() =>{
+        let result = await BookService.getAll()
 
+        return setBook(result)
+    }
+    const listType = async() =>{
+        let result = await BookService.getAllType()
+
+        return setType(result)
+    }
     useEffect(() =>{
-        const listBook = async() =>{
-            let result = await BookService.getAll()
-
-            return setBook(result)
-        }
+        listType()
         listBook()
     }, [])
-    const handleUpdate = (id) => {
-        navigate(`/edit/${id}`);
-    }  
+
+
+    // const handleUpdate = (id) => {
+    //     navigate(`/edit/${id}`);
+    // }  
     
     
     const handleDelete  = async (id) =>{
@@ -43,6 +51,7 @@ export default function Book() {
                         <tr>
                             <th>Title</th>
                             <th>Quantity</th>
+                            <th>type</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -52,11 +61,19 @@ export default function Book() {
                                 <tr key={index}>
                                     <td>{bookList.title}</td>
                                     <td>{bookList.quantity}</td>
+                                    <td>{
+                                        type.filter((typeList) =>(typeList?.id == bookList?.typeId))[0]?.name
+                                        
+                                        }</td>
                                     <td>
                                        
-                                        <button onClick={() => handleUpdate(bookList.id)} style={{color: "white", background: "red"}} className='btn btn-warning' >Edit</button>
+                                        {/* <button onClick={() => handleUpdate(bookList.id)} style={{color: "white", background: "red"}} className='btn btn-warning' >Edit</button> */}
 
-                                        
+                                        <NavLink to={`/edit/${bookList.id}`}>
+                                            <button>
+                                                Edit
+                                            </button>
+                                        </NavLink>
                                         <button onClick={() => handleDelete(bookList.id)} style={{color: "white", background: "red"}}  className='btn btn-warning' >Delete</button>
                                     </td>
                                 </tr>

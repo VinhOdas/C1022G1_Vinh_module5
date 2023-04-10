@@ -11,6 +11,16 @@ export const getAll = async () =>{
         }
 }
 
+export const getAllType = async () =>{
+    try {
+        let result  = axios.get(`http://localhost:3000/typeBook`)
+        return (await result).data
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
 export const save = async (values) =>{
     try {
         await axios.post(URLAPI + `/`, {...values})

@@ -9,8 +9,16 @@ import { Formik,Form, Field } from 'formik'
     const [bookEdit, setBookEdit] = useState()
     const id = useParams()
     console.log(id);
-    
-    
+    const [type, setType] = useState([])
+
+    const listType = async() =>{
+        let result = await BookService.getAllType()
+
+        return setType(result)
+    }
+    useEffect(() =>{
+        listType()
+    },[])
     
     useEffect(() =>{
         const byID = async() =>{
@@ -35,7 +43,7 @@ import { Formik,Form, Field } from 'formik'
 
   return (
     <>
-     <Formik initialValues={{id: bookEdit.id, title: bookEdit.title, quatity: bookEdit.quatity}}
+     <Formik initialValues={{id: bookEdit?.id, title: bookEdit?.title, quantity: bookEdit?.quantity, typeId: bookEdit?.typeId}}
         onSubmit={async ( values) =>{
             await editBook(values)
 
@@ -52,6 +60,27 @@ import { Formik,Form, Field } from 'formik'
             <div>
                 <label htmlFor="quantity">Quantity</label>
                 <Field name='quantity' id='quantity' />
+            </div>
+            <div>
+                <label htmlFor="typeId">type</label>
+                <Field name='typeId' id='typeId' as='select' >
+                <>
+                         <option value="luachon">
+                         ---------------
+                         </option>
+                    { 
+                        type.map((typeList, i) =>(
+                        
+                          
+                             <option key={i} value={typeList.id}>
+                                 {typeList.name}
+                             </option>
+                          
+                        ))
+                        
+                    }
+                    </>
+                </Field>
             </div>
             {
              <button type='submit'>Save</button>
