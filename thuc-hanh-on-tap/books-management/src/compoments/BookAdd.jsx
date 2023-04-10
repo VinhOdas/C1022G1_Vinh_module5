@@ -2,6 +2,8 @@ import React, {  useEffect, useState } from 'react'
 import {Form, Formik, Field} from 'formik'
 import * as BookService from './service/BookService'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 export default function BookAdd() {
 
     const [bookAdd, setBookAdd] = useState([])
@@ -28,7 +30,15 @@ export default function BookAdd() {
                const addBook = async () =>{
                 await BookService.save(values)
                 setBookAdd(values)
+               
                 navigate("/")
+              
+                Swal.fire(
+                    'Good job!',
+                    'You clicked the button!',
+                    'success'
+                  )
+               
 
                 return bookAdd
                } 

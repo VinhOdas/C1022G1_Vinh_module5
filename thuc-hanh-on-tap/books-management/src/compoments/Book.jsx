@@ -2,17 +2,27 @@ import React, { useEffect, useState } from 'react'
 import * as BookService from './service/BookService'
 import { NavLink, useNavigate } from 'react-router-dom'
 import MoDal from './MoDal'
+import ReactPaginate from 'react-paginate';
+import Pagination from 'react-paginate'
+import {Swal} from 'sweetalert2'
+
+
 
 export default function Book() {
     let navigate = useNavigate()
     const [book, setBook] = useState([])
     const [type, setType] = useState([])
+    const [pageCount, setPageCount] = useState(0);
+    const [currentPage, setCurrentPage] = useState(0);
     const [deleteId, setDeleteId] = useState(0)
     const [deleteName, setDeleteName] = useState('')
+    const [searchName, setSearchName] = useState('')
+    const [searchType, setSearchType] = useState(0)
     const listBook = async () => {
-        let result = await BookService.getAll()
+        let result = await BookService.getAll(searchType)
+         setBook(result)
+        setPageCount(Math.ceil(result.length / 5));
 
-        return setBook(result)
     }
     const listType = async () => {
         let result = await BookService.getAllType()
@@ -28,7 +38,9 @@ export default function Book() {
         setDeleteId(id)
         setDeleteName(name)
     }
-
+    const handlePageClick = (selectedPage) => {
+        setCurrentPage(selectedPage.selected);
+      };
 
     // const handleUpdate = (id) => {
     //     navigate(`/edit/${id}`);
@@ -46,7 +58,24 @@ export default function Book() {
 
     return (
         <>
+        
             <h1>Library</h1>
+            <input type='text' onChange={(e) =>{
+                setSearchName(e.target.value)
+            }} />
+
+            <select name="typeId" onChange={(e) =>{
+                setSearchType(e.target.value)
+            }} >
+                <option value="">---------</option>
+                {
+                    type.map((typeList,i) =>(
+                        <option key={i} value={typeList.id}>
+                                {typeList.name}
+                        </option>
+                    ))
+                }
+            </select>
             <div>
                 <NavLink to='/add'>
                     <button style={{ color: "red" }} >Create</button>
@@ -64,42 +93,75 @@ export default function Book() {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            book.map((bookList, index) => (
+                        {  
+                            book.filter((bookSearch ) =>{
+                                return searchName.toLowerCase() === '' ? bookSearch: bookSearch.title.toLowerCase().includes(searchName)
+                              
+
+                            })
+                            
+                            .slice(currentPage * 5, currentPage * 5+5).map((bookList, index) => (
                                 <tr key={index}>
-                                    <td>{bookList.title}</td>
-                                    <td>{bookList.quantity}</td>
-                                    <td>{
-                                        type.filter((typeList) => (typeList?.id == bookList?.typeId))[0]?.name
+                                <td>{bookList.title}</td>
+                                <td>{bookList.quantity}</td>
+                                <td>{
+                                    type.filter((typeList) => (typeList?.id == bookList?.typeId))[0]?.name
 
-                                    }</td>
-                                    <td>
+                                }</td>
+                                <td>
 
-                                        {/* <button onClick={() => handleUpdate(bookList.id)} style={{color: "white", background: "red"}} className='btn btn-warning' >Edit</button> */}
-
-                                        <NavLink to={`/edit/${bookList.id}`}>
-                                            <button>
-                                                Edit
-                                            </button>
-                                        </NavLink>
-                                        {/* <button onClick={() => handleDelete(bookList.id)} style={{color: "white", background: "red"}}  className='btn btn-warning' >Delete</button> */}
-                                        {/* <!-- Button trigger modal --> */}
-                                        <button type="button" onClick={() => {
-                                            swapDelete(bookList.id,
-                                                bookList.name
-
-                                            )
-                                        }} className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
-                                            Delete
+                                    <NavLink to={`/edit/${bookList.id}`}>
+                                        <button>
+                                            Edit
                                         </button>
-                                        
-                                    </td>
+                                    </NavLink>
+                                    <button type="button" onClick={() => {
+                                        swapDelete(bookList.id,
+                                            bookList.name
 
-                                </tr>
-                            ))
+                                        )
+                                    }} className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
+                                        Delete
+                                    </button>
+                                    
+                                </td>
+
+                            </tr> 
+                                    
+
+                        
+                                
+                            )
+                            )
+                            
                         }
                     </tbody>
                 </table>
+
+                <ReactPaginate
+        previousLabel={'previous'} 
+        nextLabel={'next'}
+        breakLabel={'...'}
+        pageCount={pageCount}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName={'pagination'}
+        activeClassName={'active'}
+              />
+
+
+
+          {/* <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      /> */}
+
 
 
             </div>
@@ -113,24 +175,7 @@ export default function Book() {
 
             />
 
-{/* <!-- Modal --> */}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
         </>
 
 
