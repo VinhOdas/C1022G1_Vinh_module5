@@ -15,7 +15,7 @@ export default function Book() {
     const [pageCount, setPageCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(0);
     const [deleteId, setDeleteId] = useState(0)
-    const [deleteName, setDeleteName] = useState('')
+    const [deleteTitle, setDeleteTitle] = useState('')
     const [searchName, setSearchName] = useState('')
     const [searchType, setSearchType] = useState(0)
     const listBook = async () => {
@@ -34,9 +34,9 @@ export default function Book() {
         listBook()
     }, [])
 
-    const swapDelete = (id, name) => {
+    const swapDelete = (id, title) => {
         setDeleteId(id)
-        setDeleteName(name)
+        setDeleteTitle(title)
     }
     const handlePageClick = (selectedPage) => {
         setCurrentPage(selectedPage.selected);
@@ -94,13 +94,12 @@ export default function Book() {
                     </thead>
                     <tbody>
                         {  
-                            book.filter((bookSearch ) =>{
+                            book.
+                            filter((bookSearch ) =>{
                                 return searchName.toLowerCase() === '' ? bookSearch: bookSearch.title.toLowerCase().includes(searchName)
-                              
-
                             })
-                            
-                            .slice(currentPage * 5, currentPage * 5+5).map((bookList, index) => (
+                            .slice(currentPage * 5, currentPage * 5+5)
+                            .map((bookList, index) => (
                                 <tr key={index}>
                                 <td>{bookList.title}</td>
                                 <td>{bookList.quantity}</td>
@@ -117,7 +116,7 @@ export default function Book() {
                                     </NavLink>
                                     <button type="button" onClick={() => {
                                         swapDelete(bookList.id,
-                                            bookList.name
+                                            bookList.title
 
                                         )
                                     }} className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
@@ -152,22 +151,10 @@ export default function Book() {
 
 
 
-          {/* <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-      /> */}
-
-
-
             </div>
             <MoDal
                 id={deleteId}
-                name={deleteName}
+                title={deleteTitle}
                 findAllList={() =>{
                     listBook()
                 }}

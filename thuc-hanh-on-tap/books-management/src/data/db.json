@@ -1,42 +1,6 @@
 {
   "books": [
     {
-      "id": 6,
-      "title": "sadasd",
-      "quantity": "sssssssssss",
-      "typeId": "1"
-    },
-    {
-      "id": 8,
-      "title": "vinhodas",
-      "quantity": "hhhhhhhhhhhh",
-      "typeId": "1"
-    },
-    {
-      "title": "sadsad",
-      "quantity": "sadasd",
-      "typeId": 1,
-      "id": 9
-    },
-    {
-      "title": "s d",
-      "quantity": "asdasd",
-      "typeId": "2",
-      "id": 10
-    },
-    {
-      "title": "asd",
-      "quantity": "asdasd",
-      "typeId": 1,
-      "id": 11
-    },
-    {
-      "title": "asdasd",
-      "quantity": "asdsad",
-      "typeId": "2",
-      "id": 12
-    },
-    {
       "title": "asdasd",
       "quantity": "asdasd",
       "typeId": "2",
@@ -53,60 +17,6 @@
       "quantity": "asdasd",
       "typeId": "2",
       "id": 15
-    },
-    {
-      "title": "sad",
-      "quantity": "sdasd",
-      "typeId": 1,
-      "id": 16
-    },
-    {
-      "title": "",
-      "quantity": "",
-      "typeId": 1,
-      "id": 17
-    },
-    {
-      "title": "",
-      "quantity": "",
-      "typeId": 1,
-      "id": 18
-    },
-    {
-      "title": "",
-      "quantity": "",
-      "typeId": 1,
-      "id": 19
-    },
-    {
-      "title": "",
-      "quantity": "",
-      "typeId": 1,
-      "id": 20
-    },
-    {
-      "title": "sad",
-      "quantity": "",
-      "typeId": 1,
-      "id": 21
-    },
-    {
-      "title": "ss",
-      "quantity": "",
-      "typeId": 1,
-      "id": 22
-    },
-    {
-      "title": "asdas",
-      "quantity": "dasd",
-      "typeId": 1,
-      "id": 23
-    },
-    {
-      "title": "asdsad",
-      "quantity": "",
-      "typeId": 1,
-      "id": 24
     },
     {
       "title": "asdsad",
@@ -155,6 +65,12 @@
       "quantity": "sdsd",
       "typeId": 1,
       "id": 32
+    },
+    {
+      "title": "sadsd",
+      "quantity": "sdsd",
+      "typeId": 1,
+      "id": 33
     }
   ],
   "typeBook": [

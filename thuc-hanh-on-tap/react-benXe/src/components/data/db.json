@@ -1,0 +1,80 @@
+{
+  "benXe": [
+    {
+      "id": 2,
+      "maXe": 1,
+      "loaiXeId": "2",
+      "nhaXeId": "2",
+      "diemDiId": "2",
+      "diemDenId": "2",
+      "phone": "dsadsad",
+      "email": "sadasd",
+      "gioDi": 1,
+      "gioDen": 2
+    },
+    {
+      "id": 3,
+      "maXe": 123,
+      "loaiXeId": 1,
+      "nhaXeId": 1,
+      "diemDenId": 1,
+      "diemDiId": 1,
+      "phone": "dsadsad",
+      "email": "sadasd",
+      "gioDi": 1,
+      "gioDen": 2
+    },
+    {
+      "maXe": 21212121,
+      "loaiXeId": "2",
+      "nhaXeId": "2",
+      "diemDiId": "2",
+      "diemDenId": "2",
+      "phone": "sd",
+      "email": "sadsad",
+      "gioDi": 2,
+      "gioDen": 213,
+      "id": 4
+    }
+  ],
+  "loaiXe": [
+    {
+      "id": 1,
+      "name": "xe tho"
+    },
+    {
+      "id": 2,
+      "name": "xe giuong nam"
+    }
+  ],
+  "nhaXe": [
+    {
+      "id": 1,
+      "name": "Trung Tin"
+    },
+    {
+      "id": 2,
+      "name": "Hai Ha"
+    }
+  ],
+  "diemDi": [
+    {
+      "id": 1,
+      "name": "Quang Binh"
+    },
+    {
+      "id": 2,
+      "name": "Ha Noi"
+    }
+  ],
+  "diemDen": [
+    {
+      "id": 1,
+      "name": "Quang Binh"
+    },
+    {
+      "id": 2,
+      "name": "Ha Noi"
+    }
+  ]
+}
