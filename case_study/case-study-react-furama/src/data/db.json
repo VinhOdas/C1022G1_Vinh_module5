@@ -29,5 +29,68 @@
       "id": 4,
       "name": "Silver"
     }
-  ]
+  ],
+
+  "facility": [
+    {
+        "id" : 5,
+        "name":" Xe đạp",
+        "area": 1000,
+        "cost": 5,
+        "maxPeople": 5,
+        "facilityType": 1,
+        "rentType":  1,
+        "standardRoom": "VIP",
+        "descriptionOtherCovenience": "",
+        "poolArea": 5,
+        "numberOfFloors": 5,
+        "facilityFree": "đèn mờ",
+        "status": false
+
+
+    }
+],
+  "facilityTypes": [
+    {
+        "id": 1,
+        "name": "Room"
+    },
+    {
+        "id": 2,
+        "name": "House"
+    },
+    {
+        "id": 3,
+        "name": "Villa"
+    }
+    
+], 
+"rentTypes": [
+  {
+    "id": 1,
+    "name": " Xe đạp"
+  },
+  {
+    "id": 2,
+    "name": "Ho Boi"
+  }
+], 
+"contract": [
+  {
+    "id": 1,
+  "startDate": "2019-11-11",
+  "endDate": "2019-11-17",
+  "deposit": "?",
+  "customer":1,
+  "facility": 1,
+      "rentType":  1,
+      "standardRoom": "Vip",
+      "descriptionOtherCovenience": "on",
+      "poolArea": 5,
+      "numberOfFloors": 5,
+      "facilityFree": "đèn mờ",
+      "status": false
+
+  }
+]
 }

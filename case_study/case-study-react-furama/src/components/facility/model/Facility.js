@@ -5,14 +5,8 @@
 //         area: 1000,
 //         cost: 5,
 //         maxPeople: 5,
-//         facilityType: {
-//             id: 1,
-//             name: 'Diamond'
-//         },
-//         rentType:  {
-//             id: 1,
-//             name: '?'
-//         },
+//         facilityType: 1,
+//         rentType:  1,
 //         standardRoom: 'Vip',
 //         descriptionOtherCovenience: 'ổn',
 //         poolArea: 5,
@@ -27,20 +21,17 @@
 //  const facilityType = [
 //     {
 //         id: 1,
-//         name: 'Diamond'
+//         name: 'Room'
 //     },
 //     {
 //         id: 2,
-//         name: 'Platinium'
+//         name: 'House'
 //     },
 //     {
 //         id: 3,
-//         name: 'Gold'
-//     },
-//     {
-//         id: 4,
-//         name: 'Silver'
+//         name: 'Villa'
 //     }
+    
 // ];
 
 // const rentType = [
