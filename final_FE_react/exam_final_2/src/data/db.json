@@ -1,0 +1,62 @@
+{
+  "books": [
+    {
+      "id": 3,
+      "name": "21323",
+      "gender": "0",
+      "typeId": "1"
+    },
+    {
+      "name": "",
+      "gender": "",
+      "typeId": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "gender": "",
+      "typeId": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "gender": "0",
+      "typeId": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "gender": "1",
+      "typeId": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "gender": "",
+      "typeId": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "gender": "1",
+      "typeId": "2",
+      "id": 11
+    },
+    {
+      "name": "asdasd",
+      "gender": "0",
+      "typeId": "2",
+      "id": 12
+    }
+  ],
+  "typeBook": [
+    {
+      "id": 1,
+      "name": "Hoat Hinh"
+    },
+    {
+      "id": 2,
+      "name": "Nguoi Lon"
+    }
+  ]
+}

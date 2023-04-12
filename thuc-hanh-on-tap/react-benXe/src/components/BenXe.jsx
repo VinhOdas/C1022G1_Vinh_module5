@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import * as BenXeService from './service/BenXeService'
 import {NavLink} from 'react-router-dom'
 import { Form, Formik, Field } from 'formik'
-
+import ReactPaginate from 'react-paginate'
 export default function BenXe() {
     const [benXe, setBenXe] = useState([])
     const [loaiXe, setloaiXe] = useState([])
@@ -11,6 +11,14 @@ export default function BenXe() {
     const [diemDen, setDiemDen] = useState([])
     const [deleteId, setDeleteId] = useState(0)
     const [deleteMaXe, setDeleteMaXe] = useState(0)
+    const [pageCount, setPageCount] = useState(0)
+    const [currentPage, setCurrentPage] = useState(0)
+
+    const handlePageClick = (selectedPage) =>{
+
+        setCurrentPage(selectedPage.selected)
+
+    }
 
     const swapDelete = (id, maXe) =>{
         setDeleteId(id)
@@ -19,6 +27,7 @@ export default function BenXe() {
     const listBenXe = async () => {
         let res = await BenXeService.getAll()
         setBenXe(res)
+        setPageCount(Math.ceil(res.length / 5) )
     }
 
 
@@ -114,8 +123,10 @@ export default function BenXe() {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                        benXe?.map((benXeList, i) => (
+                    {   
+                       benXe.
+                       slice(currentPage * 5, currentPage *5 + 5)
+                       .map((benXeList, i) => (
                             <tr key={i}>
                                 <td>{i+1}</td>
                                 <td>{benXeList.maXe}</td>
@@ -161,6 +172,15 @@ export default function BenXe() {
   </div>
 </div>
  
+<ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      />
         </>
     )
 }

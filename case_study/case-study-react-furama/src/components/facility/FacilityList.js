@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import facilityData from './model/Facility'
 import { NavLink } from 'react-router-dom'
 
 function FacilityList() {
+  const [facility, setFacility] = useState([])
+  
+  useEffect(() =>{
+    const listFacility = async() =>{
+      let res = await 
+    }
+  })
   return (
       
     <div>

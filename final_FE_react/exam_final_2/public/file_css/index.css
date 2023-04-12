@@ -4,6 +4,12 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 }
+#nam{
+    margin-left: 1%;
+}
+#nu{
+    margin-left: 2%;
+}
 
 .header {
     height: 124px;
